@@ -102,21 +102,21 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .cover .watermark svg{width:100%;height:100%;stroke:rgba(255,255,255,.13);fill:none;stroke-width:.7}
 
 /* ---------- hero slider ---------- */
-.hero{position:relative;height:100vh;min-height:620px}
-.slide{position:absolute;inset:0;padding:var(--header-h) 0 120px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;visibility:hidden;transition:opacity 1s ease, visibility 1s}
+.hero{position:relative;height:86vh;min-height:600px;max-height:780px}
+.slide{position:absolute;inset:0;padding:var(--header-h) 0 96px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;visibility:hidden;transition:opacity 1s ease, visibility 1s}
 .slide.active{opacity:1;visibility:visible}
 .slide .inner{position:relative;z-index:2;max-width:780px;padding:0 20px}
 .slide .kicker{display:inline-block;color:var(--gold);font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;margin-bottom:22px}
-.slide h1{color:var(--white);font-size:clamp(38px,6vw,70px);font-weight:200;margin-bottom:22px;letter-spacing:-.01em}
+.slide h1{color:var(--white);font-size:clamp(36px,5.4vw,64px);font-weight:200;margin-bottom:18px;letter-spacing:-.01em}
 .slide h1 .serif{color:var(--gold)}
-.slide p{color:rgba(255,255,255,.85);font-size:17px;max-width:600px;margin:0 auto 40px}
+.slide p{color:rgba(255,255,255,.85);font-size:16.5px;max-width:600px;margin:0 auto 30px}
 .slide .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .slide.active .inner > *{animation:fadeUp .9s both}
 .slide.active .inner > *:nth-child(2){animation-delay:.15s}
 .slide.active .inner > *:nth-child(3){animation-delay:.3s}
 .slide.active .inner > *:nth-child(4){animation-delay:.45s}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-.hero-dots{position:absolute;bottom:135px;left:0;right:0;display:flex;justify-content:center;gap:10px;z-index:5}
+.hero-dots{position:absolute;bottom:112px;left:0;right:0;display:flex;justify-content:center;gap:10px;z-index:5}
 .hero-dots button,.dots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.45);cursor:pointer;transition:all .3s;padding:0}
 .hero-dots button.active{background:var(--white);width:30px;border-radius:6px}
 .hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:transparent;color:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
@@ -125,34 +125,43 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .hero-arrow.prev{left:30px}.hero-arrow.next{right:30px}
 
 /* ---------- overlap feature tiles ---------- */
-.overlap{position:relative;z-index:10;margin-top:-110px;padding-bottom:40px}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.tile{display:block;position:relative;height:270px;border-radius:4px;box-shadow:var(--shadow);transition:transform .35s}
+.overlap{position:relative;z-index:10;margin-top:-84px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tile{display:block;position:relative;height:190px;border-radius:6px;box-shadow:var(--shadow);transition:transform .35s}
 .tile:hover{transform:translateY(-8px)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,0) 65%);z-index:1}
-.tile .tile-icon{position:absolute;top:28px;left:28px;z-index:2;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center}
+.tile .tile-icon{position:absolute;top:22px;left:24px;z-index:2;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center}
 .tile .tile-icon svg{width:24px;height:24px;stroke:var(--white);fill:none;stroke-width:1.6}
-.tile .tile-text{position:absolute;left:28px;right:28px;bottom:26px;z-index:2}
+.tile .tile-text{position:absolute;left:24px;right:24px;bottom:20px;z-index:2}
 .tile .tile-text small{display:block;color:var(--gold);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:6px}
-.tile h3{color:var(--white);font-size:22px;font-weight:400}
+.tile h3{color:var(--white);font-size:20px;font-weight:400}
+.tile .arrow{position:absolute;top:24px;right:24px;z-index:2;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;color:#fff;transition:all .3s}
+.tile:hover .arrow{background:#fff;color:var(--ink);transform:rotate(-45deg)}
+.tile .arrow svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
 
 /* ---------- section basics ---------- */
-.section{padding:100px 0}
+.section{padding:72px 0}
+.section.tight-top{padding-top:56px}
 .bg-light{background:var(--light)}
-.section-head{text-align:center;max-width:640px;margin:0 auto 60px}
-.section-head .eyebrow{display:block;color:var(--primary);font-size:12px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;margin-bottom:12px}
-.section-head h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:12px}
+.section-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.section-head .eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--primary);font-size:12px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;margin-bottom:12px}
+.section-head .eyebrow::before,.section-head .eyebrow::after{content:"";width:28px;height:1px;background:var(--gold)}
+.section-head h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:10px}
+.section-head h2 .serif{color:var(--primary)}
 .section-head p{color:var(--muted)}
 
 /* ---------- unit-4 (icon features) ---------- */
-.units{display:grid;grid-template-columns:repeat(3,1fr);gap:50px 40px}
-.unit{display:flex;gap:22px}
-.unit .u-icon{flex-shrink:0;width:64px;height:64px;border-radius:50%;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;transition:background .25s}
-.unit .u-icon svg{width:28px;height:28px;stroke:var(--primary);fill:none;stroke-width:1.5;transition:stroke .25s}
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.unit{display:flex;gap:18px;padding:26px 24px;background:var(--white);border:1px solid var(--line);border-radius:6px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.unit::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--primary),var(--gold));transition:width .35s}
+.unit:hover{transform:translateY(-4px);box-shadow:0 18px 34px -20px rgba(122,36,48,.45);border-color:transparent}
+.unit:hover::after{width:100%}
+.unit .u-icon{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;transition:background .25s}
+.unit .u-icon svg{width:24px;height:24px;stroke:var(--primary);fill:none;stroke-width:1.5;transition:stroke .25s}
 .unit:hover .u-icon{background:var(--primary)}
 .unit:hover .u-icon svg{stroke:var(--white)}
-.unit h3{font-size:19px;font-weight:500;margin-bottom:8px}
-.unit p{font-size:14.5px;margin-bottom:10px}
+.unit h3{font-size:17px;font-weight:500;margin-bottom:6px}
+.unit p{font-size:14px;line-height:1.65}
 .unit .more{color:var(--primary);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px}
 .unit .more:hover{gap:10px}
 
@@ -162,89 +171,107 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .c-item{display:none}
 .c-item.active{display:grid;grid-template-columns:1fr 1fr;align-items:center;animation:fadeIn .6s}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.about-img{height:440px;border-radius:4px}
+.about-img{height:360px;border-radius:6px}
 .about-img .big-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
 .about-img .big-icon svg{width:38%;height:38%;stroke:rgba(255,255,255,.85);fill:none;stroke-width:.8}
-.overlap-left{background:var(--white);padding:56px;margin-left:-90px;position:relative;z-index:3;box-shadow:var(--shadow)}
+.overlap-left{background:var(--white);padding:40px 44px;border-radius:6px;margin-left:-90px;position:relative;z-index:3;box-shadow:var(--shadow)}
 .overlap-left .q-tag{color:var(--primary);font-size:12px;letter-spacing:.25em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:16px}
-.overlap-left h3{font-size:28px;margin-bottom:18px}
-.overlap-left p.lead{font-size:16.5px;color:var(--ink);font-weight:300;line-height:1.85}
+.overlap-left h3{font-size:26px;margin-bottom:14px}
+.overlap-left p.lead{font-size:16px;color:var(--ink);font-weight:300;line-height:1.85}
 .overlap-left ul{margin-top:18px}
 .overlap-left li{position:relative;padding-left:24px;margin-bottom:8px;font-size:14.5px}
 .overlap-left li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:2px;background:var(--gold)}
 .overlap-left .sign{margin-top:22px;font-size:14px}
 .overlap-left .sign em{font-family:'Playfair Display',serif;color:var(--ink);font-size:16px}
-.dots{display:flex;justify-content:center;gap:10px;margin-top:40px}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:26px}
 .dots button{background:#D8CFC9}
 .dots button.active{background:var(--primary);width:30px;border-radius:6px}
 
 /* ---------- service tiles (destinations style) ---------- */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.svc-card{display:block;text-align:center;group:1}
-.svc-card .svc-img{height:260px;border-radius:4px;overflow:hidden;position:relative}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.svc-card{display:flex;flex-direction:column;text-align:center}
+.svc-card .svc-img{height:190px;border-radius:6px;overflow:hidden;position:relative}
 .svc-card .svc-img .cover{position:absolute;inset:0;transition:transform .6s ease}
 .svc-card:hover .svc-img .cover{transform:scale(1.07)}
 .svc-card .svc-img .ic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
-.svc-card .svc-img .ic svg{width:84px;height:84px;stroke:rgba(255,255,255,.9);fill:none;stroke-width:1.1;transition:transform .4s}
+.svc-card .svc-img .ic svg{width:64px;height:64px;stroke:rgba(255,255,255,.9);fill:none;stroke-width:1.1;transition:transform .4s}
 .svc-card:hover .svc-img .ic svg{transform:scale(1.1) rotate(-4deg)}
 .svc-card .num{position:absolute;top:18px;left:20px;z-index:2;font-family:'Playfair Display',serif;font-size:15px;color:rgba(255,255,255,.75)}
-.svc-card .svc-text{background:var(--white);margin:-40px 24px 0;position:relative;z-index:3;padding:24px 20px;box-shadow:0 14px 30px -18px rgba(30,26,24,.35);transition:transform .3s}
+.svc-card .svc-text{flex:1;background:var(--white);margin:-34px 14px 0;border-radius:6px;position:relative;z-index:3;padding:20px 16px;box-shadow:0 14px 30px -18px rgba(30,26,24,.35);transition:transform .3s}
 .svc-card:hover .svc-text{transform:translateY(-6px)}
 .svc-card strong{display:block;color:var(--primary);font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
-.svc-card h3{font-size:20px;font-weight:400;margin-bottom:6px}
+.svc-card h3{font-size:18px;font-weight:400;margin-bottom:6px}
+.svc-card .go{display:inline-block;margin-top:10px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
+.svc-card:hover .go{letter-spacing:.14em}
 .svc-card p{font-size:13.5px;color:var(--muted);line-height:1.6}
-.svc-grid .svc-card:last-child:nth-child(3n+1){grid-column:2}
+.svc-cta{border-radius:6px;padding:30px 24px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;color:#fff;min-height:100%}
+.svc-cta > *{position:relative;z-index:2}
+.svc-cta small{color:var(--gold);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:10px}
+.svc-cta h3{color:#fff;font-size:22px;font-weight:300;margin-bottom:10px}
+.svc-cta p{color:rgba(255,255,255,.8);font-size:13.5px;line-height:1.6;margin-bottom:20px}
+.svc-cta .btn{padding:12px 22px;font-size:12px}
 
 /* ---------- parallax band ---------- */
-.band{padding:150px 0;text-align:center;color:var(--white);background-attachment:fixed}
+.band{padding:84px 0 56px;text-align:center;color:var(--white);background-attachment:fixed}
 .band .inner{position:relative;z-index:2}
-.band .play{width:90px;height:90px;border-radius:50%;background:var(--white);display:inline-flex;align-items:center;justify-content:center;margin-bottom:34px;position:relative;box-shadow:0 0 0 0 rgba(255,255,255,.5);animation:ring 2.4s infinite}
+.band .play{width:76px;height:76px;border-radius:50%;background:var(--white);display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;position:relative;box-shadow:0 0 0 0 rgba(255,255,255,.5);animation:ring 2.4s infinite}
 .band .play svg{width:30px;height:30px;stroke:var(--primary);fill:none;stroke-width:1.8}
 @keyframes ring{0%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}70%{box-shadow:0 0 0 22px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
 .band h2{color:var(--white);font-size:clamp(30px,4.4vw,52px);font-weight:200;max-width:760px;margin:0 auto 18px}
 .band h2 .serif{color:var(--gold)}
-.band p{color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 36px}
+.band p{color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 28px}
+.band .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.band .stats{margin-top:56px;padding-top:34px;border-top:1px solid rgba(255,255,255,.15)}
+.band .stat b{color:var(--gold)}
+.band .stat span{color:rgba(255,255,255,.7)}
 
 /* ---------- stats ---------- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
-.stat b{display:block;font-size:46px;font-weight:200;color:var(--primary);line-height:1.1}
+.stat b{display:block;font-size:42px;font-weight:200;color:var(--primary);line-height:1.1}
 .stat span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
 /* ---------- clients ---------- */
-.clients{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.client{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:26px 18px;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:all .25s}
-.client:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:0 14px 28px -16px rgba(122,36,48,.4)}
-.client .mono{width:40px;height:40px;border-radius:50%;background:var(--gold-soft);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;margin-bottom:10px}
-.client span{font-size:14px;color:var(--ink);font-weight:400;line-height:1.4}
-.client small{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee + .marquee{margin-top:14px}
+.m-track{display:flex;width:max-content;animation:marq 48s linear infinite}
+.marquee.rev .m-track{animation-direction:reverse;animation-duration:56s}
+.marquee:hover .m-track{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.client{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:50px;padding:8px 22px 8px 8px;margin-right:14px;white-space:nowrap;transition:border-color .2s,box-shadow .2s}
+.client:hover{border-color:var(--primary);box-shadow:0 10px 22px -14px rgba(122,36,48,.5)}
+.client .mono{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;flex-shrink:0}
+.client span{font-size:14px;color:var(--ink);font-weight:400;line-height:1.3}
+.client small{display:block;font-size:11px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.m-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;row-gap:12px}.m-track .dup{display:none}.marquee{mask-image:none;-webkit-mask-image:none}}
 
 /* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
-.contact-form{background:var(--white);padding:44px;box-shadow:var(--shadow)}
+.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch}
+.contact-form{background:var(--white);padding:36px;border-radius:6px;border:1px solid var(--line);box-shadow:var(--shadow)}
 .contact-form h3{font-size:24px;margin-bottom:6px}
-.contact-form > p{color:var(--muted);margin-bottom:26px;font-size:14px}
-.field{margin-bottom:16px}
+.contact-form > p{color:var(--muted);margin-bottom:20px;font-size:14px}
+.field{margin-bottom:14px}
 .field label{display:block;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
 .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--light);padding:13px 16px;font-family:inherit;font-size:16px;font-weight:300;color:var(--ink);border-radius:4px;outline:none;transition:border-color .2s,background .2s}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--primary);background:var(--white)}
 .field textarea{min-height:110px;resize:vertical}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.contact-info .ci{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.contact-info{display:flex;flex-direction:column;position:relative;border-radius:6px;padding:30px 32px;color:rgba(255,255,255,.85)}
+.contact-info > *{position:relative;z-index:2}
+.contact-info .ci{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
 .contact-info .ci:last-child{border-bottom:none}
-.contact-info .ci-ic{width:50px;height:50px;border-radius:50%;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-info .ci-ic svg{width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:1.8}
-.contact-info h4{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
-.contact-info a:hover{color:var(--primary)}
-
-/* ---------- book band ---------- */
-.book{padding:80px 0;text-align:center;border-top:1px solid var(--line)}
-.book h2{font-size:clamp(26px,3vw,36px);margin-bottom:28px}
-.book .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.contact-info .ci-ic{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-info .ci-ic svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.contact-info h4{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px;color:var(--gold)}
+.contact-info p{font-size:14.5px}
+.contact-info a{color:#fff}
+.contact-info a:hover{color:var(--gold)}
+.contact-info .ci-wa{margin-top:auto;width:100%}
+.contact-info .ci:nth-last-child(2){border-bottom:none;margin-bottom:18px}
 
 /* ---------- footer ---------- */
-.site-footer{background:#1A1615;color:rgba(255,255,255,.62);padding:90px 0 40px;font-size:14px}
+.site-footer{background:#1A1615;color:rgba(255,255,255,.62);padding:60px 0 30px;font-size:14px}
 .f-grid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:50px}
-.footer-heading{color:var(--white);font-size:18px;font-weight:400;margin-bottom:22px}
+.footer-heading{color:var(--white);font-size:17px;font-weight:400;margin-bottom:18px}
 .f-links{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
 .f-links a{display:block;padding:3px 0;transition:color .2s}
 .f-links a:hover{color:var(--gold)}
@@ -255,8 +282,8 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .f-sub button:hover{background:var(--primary-dark)}
 .f-contact li{display:flex;gap:10px;margin-bottom:10px}
 .f-contact a:hover{color:var(--gold)}
-.f-bottom{margin-top:70px;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);text-align:center}
-.f-social{display:flex;justify-content:center;gap:12px;margin-bottom:20px}
+.f-bottom{margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.f-social{display:flex;gap:10px}
 .f-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;transition:all .2s}
 .f-social a:hover{background:var(--primary);border-color:var(--primary)}
 .f-social svg{width:16px;height:16px;fill:var(--white)}
@@ -265,7 +292,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
 /* ---------- service detail view ---------- */
 .view{display:none}
 .view.active{display:block}
-.page-cover{min-height:460px;display:flex;align-items:center;padding-top:var(--header-h)}
+.page-cover{min-height:380px;display:flex;align-items:center;padding-top:var(--header-h)}
 .page-cover .container{width:100%}
 .page-cover .inner{position:relative;z-index:2;color:var(--white);max-width:720px}
 .crumbs{font-size:13px;color:rgba(255,255,255,.75);margin-bottom:18px;letter-spacing:.04em}
@@ -273,10 +300,10 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .page-cover h1{color:var(--white);font-size:clamp(36px,5vw,60px);font-weight:200;margin-bottom:16px}
 .page-cover p{color:rgba(255,255,255,.88);font-size:16.5px;margin-bottom:30px}
 .detail-grid{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:start}
-.scope-block{margin-bottom:50px}
-.scope-block h2{font-size:26px;margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.scope-block{margin-bottom:36px}
+.scope-block h2{font-size:23px;margin-bottom:16px;display:flex;align-items:center;gap:14px}
 .scope-block h2 .n{font-family:'Playfair Display',serif;font-size:16px;color:var(--white);width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
-.scope-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.scope-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .scope-list li{background:var(--light);padding:14px 18px 14px 46px;position:relative;border-radius:4px;font-size:14.5px;color:var(--ink);transition:background .2s}
 .scope-list li:hover{background:var(--gold-soft)}
 .scope-list li::before{content:"";position:absolute;left:18px;top:50%;width:14px;height:8px;border-left:2px solid var(--primary);border-bottom:2px solid var(--primary);transform:translateY(-70%) rotate(-45deg)}
@@ -322,13 +349,10 @@ section,[id]{scroll-margin-top:var(--header-h)}
 @media (max-width:991px){
   .tiles,.svc-grid,.other{grid-template-columns:1fr 1fr}
   .tiles .tile:last-child{grid-column:1 / -1}
-  .svc-grid .svc-card:last-child:nth-child(3n+1){grid-column:auto}
-  .svc-grid .svc-card:last-child:nth-child(odd){grid-column:1 / -1;max-width:calc(50% - 15px);justify-self:center;width:100%}
   .units{grid-template-columns:1fr 1fr}
   .c-item.active{grid-template-columns:1fr}
-  .about-img{height:300px}
-  .overlap-left{margin:-70px 24px 0;padding:36px}
-  .clients{grid-template-columns:repeat(3,1fr)}
+  .about-img{height:260px}
+  .overlap-left{margin:-60px 20px 0;padding:30px}
   .contact-grid,.detail-grid{grid-template-columns:1fr}
   .side-card{position:static}
   .f-grid{grid-template-columns:1fr 1fr}
@@ -338,22 +362,55 @@ section,[id]{scroll-margin-top:var(--header-h)}
   .hero-arrow{display:none}
 }
 @media (max-width:600px){
-  .section{padding:70px 0}
-  .tiles,.svc-grid,.other,.units,.clients,.f-grid,.scope-list,.row2{grid-template-columns:1fr}
+  .section{padding:52px 0}
+  .section.tight-top{padding-top:44px}
+  .section-head{margin-bottom:28px}
+  .tiles,.other,.f-grid,.scope-list,.row2{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .svc-card .svc-img{height:130px}
+  .svc-card .svc-img .ic svg{width:44px;height:44px}
+  .svc-card .svc-text{margin:-24px 8px 0;padding:14px 10px}
+  .svc-card h3{font-size:15px}
+  .svc-card p{display:none}
+  .svc-cta{padding:22px 16px}
+  .svc-cta h3{font-size:18px}
+  .tiles{gap:12px}
+  .stats{gap:22px 10px}
+  .stat b{font-size:34px}
   .tiles .tile:last-child,.f-grid > div:first-child{grid-column:auto}
-  .svc-grid .svc-card:last-child:nth-child(odd){max-width:none}
-  .clients{grid-template-columns:1fr 1fr}
-  .tile{height:220px}
-  .overlap{margin-top:-80px}
-  .hero-dots{bottom:100px}
+  .tile{height:150px}
+  .tile .arrow{display:none}
+  .overlap{margin-top:-70px}
+  .hero{height:auto;min-height:740px;max-height:none}
+  .slide{padding:calc(var(--header-h) + 10px) 0 140px}
+  .slide .kicker{margin-bottom:14px;letter-spacing:.22em}
+  .slide p{font-size:15px;margin-bottom:24px}
+  .slide .actions{flex-direction:column;align-items:center;gap:10px}
+  .slide .actions .btn{min-width:230px}
+  .hero-dots{bottom:98px}
+  .tile{height:92px}
+  .tile::after{background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(0,0,0,.05))}
+  .tile .tile-icon{top:50%;left:18px;transform:translateY(-50%);width:46px;height:46px}
+  .tile .tile-text{left:80px;right:16px;top:50%;bottom:auto;transform:translateY(-50%)}
+  .tile .tile-text small{margin-bottom:2px}
+  .tile h3{font-size:17px}
+  .units{grid-template-columns:1fr 1fr;gap:12px}
+  .unit{flex-direction:column;gap:10px;padding:16px}
+  .unit .u-icon{width:44px;height:44px}
+  .unit .u-icon svg{width:20px;height:20px}
+  .unit h3{font-size:15px}
+  .unit p{font-size:12.5px;line-height:1.55}
   .brand-name{font-size:19px}
   .brand-name small{display:none}
   .overlap-left{margin:-50px 12px 0;padding:28px}
   .overlap-left h3{font-size:23px}
-  .contact-form{padding:28px}
+  .contact-form{padding:24px}
+  .contact-info{padding:24px}
+  .f-bottom{flex-direction:column}
   .wa-fab{right:16px;bottom:18px}
   .wa-panel{right:16px;bottom:90px}
-  .band{padding:100px 0}
+  .band{padding:64px 0 44px}
+  .band .stats{margin-top:40px}
   .btn{padding:14px 28px}
 }
 </style>
@@ -443,25 +500,25 @@ section,[id]{scroll-margin-top:var(--header-h)}
     <div class="container tiles">
       <a href="#contact" class="tile cover reveal" style="--c1:#8A2A21;--c2:#3F1017">
         <span class="tile-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0112 2.5a7 7 0 017 7C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
-        <div class="tile-text"><small>Step 01</small><h3>Book a free site visit</h3></div>
+        <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="tile-text"><small>Step 01</small><h3>Book a free site visit</h3></div>
       </a>
       <a href="#contact" class="tile cover reveal" style="--c1:#B8925A;--c2:#5E4220;transition-delay:.1s">
         <span class="tile-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
-        <div class="tile-text"><small>Step 02</small><h3>Tailored proposal in 24 hours</h3></div>
+        <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="tile-text"><small>Step 02</small><h3>Tailored proposal in 24 hours</h3></div>
       </a>
       <a href="#services" class="tile cover reveal" style="--c1:#3C7A8C;--c2:#132C35;transition-delay:.2s">
         <span class="tile-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
-        <div class="tile-text"><small>Step 03</small><h3>One team delivers it all</h3></div>
+        <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="tile-text"><small>Step 03</small><h3>One team delivers it all</h3></div>
       </a>
     </div>
   </section>
 
   <!-- why ABMS units -->
-  <section class="section">
+  <section class="section tight-top">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Why ABMS</span>
-        <h2>Fast, reliable service built around your building</h2>
+        <h2>Fast, reliable service built around <span class="serif">your</span> building</h2>
         <p>We meet the changing demands of our clients with efficient, high-quality work on every job.</p>
       </div>
       <div class="units">
@@ -498,7 +555,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">About the company</span>
-        <h2>Who we are</h2>
+        <h2>Who <span class="serif">we</span> are</h2>
       </div>
       <div class="carousel reveal" id="aboutCarousel">
         <div class="c-track">
@@ -544,7 +601,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">What we do</span>
-        <h2>Our Services</h2>
+        <h2>Our <span class="serif">Services</span></h2>
         <p>Seven service lines, one point of contact. Choose a service to see its full scope.</p>
       </div>
       <div class="svc-grid" id="svcGrid"></div>
@@ -558,28 +615,27 @@ section,[id]{scroll-margin-top:var(--header-h)}
       <a href="https://wa.me/971542435240?text=Hi%20ABMS%2C%20I%27d%20like%20a%20quote%20for%20facilities%20management%20services." target="_blank" rel="noopener" class="play" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></a>
       <h2>Experience <span class="serif">outstanding</span> facilities management</h2>
       <p>From structural repairs to a spotless lobby floor — tell us about your building and we'll handle the rest.</p>
-      <a href="#contact" class="btn btn-white">Schedule a site visit</a>
-    </div>
-  </section>
-
-  <!-- stats -->
-  <section class="section" style="padding-bottom:40px">
-    <div class="container stats">
-      <div class="stat reveal"><b>7</b><span>Service lines</span></div>
-      <div class="stat reveal"><b>16+</b><span>Clients served</span></div>
-      <div class="stat reveal"><b>24h</b><span>Proposal turnaround</span></div>
-      <div class="stat reveal"><b>2024</b><span>Established</span></div>
+      <div class="actions">
+        <a href="#contact" class="btn btn-primary">Schedule a site visit</a>
+        <a href="tel:+971542435240" class="btn btn-white">Call +971 54 243 5240</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>7</b><span>Service lines</span></div>
+        <div class="stat"><b>16+</b><span>Clients served</span></div>
+        <div class="stat"><b>24h</b><span>Proposal turnaround</span></div>
+        <div class="stat"><b>2024</b><span>Established</span></div>
+      </div>
     </div>
   </section>
 
   <!-- clients -->
-  <section class="section bg-light" id="clients">
+  <section class="section bg-light" id="clients" style="overflow:hidden">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Trusted by</span>
-        <h2>Organisations across the UAE</h2>
+        <h2>Organisations <span class="serif">across</span> the UAE</h2>
       </div>
-      <div class="clients reveal" id="clientGrid"></div>
+      <div class="reveal" id="clientGrid"></div>
     </div>
   </section>
 
@@ -588,7 +644,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Get in touch</span>
-        <h2>Let's schedule a site visit</h2>
+        <h2>Let's schedule a <span class="serif">site visit</span></h2>
         <p>Contact us for more information or to arrange an assessment — we'll come back with a fast, tailored proposal.</p>
       </div>
       <div class="contact-grid">
@@ -603,11 +659,12 @@ section,[id]{scroll-margin-top:var(--header-h)}
           <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" placeholder="Tell us about your building, location and what you need"></textarea></div>
           <button class="btn btn-primary" type="submit" style="width:100%">Send via WhatsApp</button>
         </form>
-        <div class="contact-info reveal">
+        <div class="contact-info cover reveal" style="--c1:#7A2430;--c2:#2A0F14">
           <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0112 2.5a7 7 0 017 7C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div><h4>Address</h4><p>Al Jazzira Tower, M Floor, Office No. 93, Hamdan Street, Abu Dhabi, UAE</p></div></div>
           <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>Phone</h4><p><a href="tel:+97126280104">+971 2 628 0104</a><br><a href="tel:+971542435240">+971 54 243 5240</a></p></div></div>
           <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div><div><h4>Email</h4><p><a href="mailto:Contactus@abmsfmg.com">Contactus@abmsfmg.com</a></p></div></div>
           <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div><div><h4>Web</h4><p><a href="http://www.abmsfmg.com">www.abmsfmg.com</a></p></div></div>
+          <a class="btn btn-wa ci-wa" target="_blank" rel="noopener" href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20schedule%20a%20site%20visit.">Chat on WhatsApp</a>
         </div>
       </div>
     </div>
@@ -617,17 +674,6 @@ section,[id]{scroll-margin-top:var(--header-h)}
 <!-- ================= SERVICE DETAIL VIEW ================= -->
 <div class="view" id="view-service"></div>
 </main>
-
-<!-- book band (shared) -->
-<section class="book">
-  <div class="container">
-    <h2>Ready to raise the standard of your facility?</h2>
-    <div class="actions">
-      <a href="https://wa.me/971542435240?text=Hi%20ABMS%2C%20I%27d%20like%20a%20quote%20for%20facilities%20management%20services." target="_blank" rel="noopener" class="btn btn-primary">WhatsApp us</a>
-      <a href="tel:+971542435240" class="btn btn-outline">Call +971 54 243 5240</a>
-    </div>
-  </div>
-</section>
 
 <!-- footer -->
 <footer class="site-footer">
@@ -656,12 +702,12 @@ section,[id]{scroll-margin-top:var(--header-h)}
       </div>
     </div>
     <div class="f-bottom">
+      <p>&copy; <span id="yr">2026</span> ABMS Facilities Management Services L.L.C S.P.C &mdash; Abu Dhabi, UAE. All rights reserved.</p>
       <div class="f-social">
         <a href="https://wa.me/971542435240" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16.04 3C9.37 3 3.98 8.35 3.98 14.97c0 2.2.6 4.26 1.63 6.04L3 29l8.2-2.55a13.1 13.1 0 004.84.93c6.67 0 12.06-5.35 12.06-11.97C28.1 8.79 22.71 3.44 16.04 3zm5.53 14.34c-.3-.15-1.78-.87-2.06-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.79-1.68-2.09-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.94-2.24-.25-.6-.5-.51-.68-.52h-.58c-.2 0-.53.07-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.15 4.54 2.52 1.08 3.03.87 3.58.82.58-.05 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35z"/></svg></a>
         <a href="mailto:Contactus@abmsfmg.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2z" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M2 6l10 7 10-7" fill="none" stroke="#fff" stroke-width="1.8"/></svg></a>
         <a href="tel:+97126280104" aria-label="Phone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></a>
       </div>
-      <p>&copy; <span id="yr">2026</span> ABMS Facilities Management Services L.L.C S.P.C &mdash; Abu Dhabi, UAE. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -760,19 +806,22 @@ section,[id]{scroll-margin-top:var(--header-h)}
   function card(s,i){
     return '<a class="svc-card reveal" href="#service/'+s.id+'">'+
       '<div class="svc-img"><div class="cover" style="--c1:'+s.c1+';--c2:'+s.c2+'"></div><span class="num">'+String(i+1).padStart(2,'0')+'</span><div class="ic">'+svg(s.id)+'</div></div>'+
-      '<div class="svc-text"><strong>'+esc(s.tag)+'</strong><h3>'+esc(s.name)+'</h3><p>'+esc(s.short)+'</p></div></a>';
+      '<div class="svc-text"><strong>'+esc(s.tag)+'</strong><h3>'+esc(s.name)+'</h3><p>'+esc(s.short)+'</p><span class="go">View scope &rarr;</span></div></a>';
   }
 
   /* ---------- render shared lists ---------- */
-  document.getElementById('svcGrid').innerHTML = SERVICES.map(card).join('');
+  document.getElementById('svcGrid').innerHTML = SERVICES.map(card).join('') +
+    '<div class="svc-cta cover reveal" style="--c1:#7A2430;--c2:#2A0F14"><small>Not sure?</small><h3>Need more than one service?</h3><p>Bundle trades under one FM contract and one account manager.</p><a class="btn btn-wa" target="_blank" rel="noopener" href="'+waLink('Hello ABMS, I need a combined facilities management proposal.')+'">Ask on WhatsApp</a></div>';
   document.getElementById('ddServices').innerHTML = SERVICES.map(function(s){
     return '<li><a href="#service/'+s.id+'"><span class="dot" style="background:'+s.c1+'"></span>'+esc(s.name)+'</a></li>';}).join('');
   document.getElementById('mmServices').innerHTML = SERVICES.map(function(s){
     return '<a href="#service/'+s.id+'">'+esc(s.name)+'</a>';}).join('');
   document.getElementById('footLinks').innerHTML += SERVICES.map(function(s){
     return '<a href="#service/'+s.id+'">'+esc(s.name)+'</a>';}).join('');
-  document.getElementById('clientGrid').innerHTML = CLIENTS.map(function(c){
-    return '<div class="client"><span class="mono">'+esc(initials(c[0]))+'</span><span>'+esc(c[0])+(c[1]?'<small>'+esc(c[1])+'</small>':'')+'</span></div>';}).join('');
+  function chip(c,dup){ return '<div class="client'+(dup?' dup':'')+'"'+(dup?' aria-hidden="true"':'')+'><span class="mono">'+esc(initials(c[0]))+'</span><span>'+esc(c[0])+(c[1]?'<small>'+esc(c[1])+'</small>':'')+'</span></div>'; }
+  function row(list,cls){ return '<div class="marquee'+cls+'"><div class="m-track">'+list.map(function(c){return chip(c);}).join('')+list.map(function(c){return chip(c,1);}).join('')+'</div></div>'; }
+  var half = Math.ceil(CLIENTS.length/2);
+  document.getElementById('clientGrid').innerHTML = row(CLIENTS.slice(0,half),'') + row(CLIENTS.slice(half),' rev');
   document.getElementById('fService').innerHTML = '<option>General enquiry</option>'+SERVICES.map(function(s){return '<option>'+esc(s.name)+'</option>';}).join('');
   document.getElementById('waQuick').innerHTML = SERVICES.map(function(s){return '<button type="button" data-msg="Hello ABMS, I would like to enquire about '+esc(s.name)+'.">'+esc(s.name)+'</button>';}).join('');
   document.getElementById('yr').textContent = new Date().getFullYear();
