@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ABMS Facilities Management Services L.L.C S.P.C — Abu Dhabi</title>
 <meta name="description" content="IT staffing, civil works, MEP, cleaning, landscaping, pest control and car cleaning for commercial, residential and industrial clients in Abu Dhabi, UAE.">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1603565095944-2a6f33bb517c?auto=format&fit=crop&w=1920&q=75">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -105,6 +107,13 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .hero{position:relative;height:86vh;min-height:600px;max-height:780px}
 .slide{position:absolute;inset:0;padding:var(--header-h) 0 96px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;visibility:hidden;transition:opacity 1s ease, visibility 1s}
 .slide.active{opacity:1;visibility:visible}
+.slide .bg{position:absolute;inset:0;z-index:1;background-image:var(--img);background-size:cover;background-position:center;transform:scale(1.14);transition:transform 8s ease-out}
+.slide.active .bg{transform:scale(1)}
+.slide .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,10,10,.62) 0%,rgba(18,10,10,.38) 45%,rgba(18,10,10,.78) 100%),linear-gradient(90deg,var(--tint),transparent 70%)}
+.hero-progress{position:absolute;left:0;bottom:0;height:3px;background:var(--gold);z-index:6;width:0}
+.hero-progress.run{animation:prog 6.5s linear forwards}
+@keyframes prog{to{width:100%}}
+@media (prefers-reduced-motion:reduce){.slide .bg{transition:none;transform:none}}
 .slide .inner{position:relative;z-index:2;max-width:780px;padding:0 20px}
 .slide .kicker{display:inline-block;color:var(--gold);font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;margin-bottom:22px}
 .slide h1{color:var(--white);font-size:clamp(36px,5.4vw,64px);font-weight:200;margin-bottom:18px;letter-spacing:-.01em}
@@ -193,10 +202,12 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .svc-card .svc-img{height:190px;border-radius:6px;overflow:hidden;position:relative}
 .svc-card .svc-img .cover{position:absolute;inset:0;transition:transform .6s ease}
 .svc-card:hover .svc-img .cover{transform:scale(1.07)}
-.svc-card .svc-img .ic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
-.svc-card .svc-img .ic svg{width:64px;height:64px;stroke:rgba(255,255,255,.9);fill:none;stroke-width:1.1;transition:transform .4s}
+.cover.has-img::before{display:none}
+.svc-card .svc-img::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 38%,rgba(0,0,0,0) 60%,rgba(0,0,0,.3) 100%);pointer-events:none}
+.svc-card .svc-img .ic{position:absolute;top:14px;right:14px;z-index:2;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.5)}
+.svc-card .svc-img .ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.7;transition:transform .4s}
 .svc-card:hover .svc-img .ic svg{transform:scale(1.1) rotate(-4deg)}
-.svc-card .num{position:absolute;top:18px;left:20px;z-index:2;font-family:'Playfair Display',serif;font-size:15px;color:rgba(255,255,255,.75)}
+.svc-card .num{position:absolute;top:16px;left:18px;z-index:2;font-family:'Playfair Display',serif;font-size:17px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.5)}
 .svc-card .svc-text{flex:1;background:var(--white);margin:-34px 14px 0;border-radius:6px;position:relative;z-index:3;padding:20px 16px;box-shadow:0 14px 30px -18px rgba(30,26,24,.35);transition:transform .3s}
 .svc-card:hover .svc-text{transform:translateY(-6px)}
 .svc-card strong{display:block;color:var(--primary);font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
@@ -294,6 +305,10 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .view.active{display:block}
 .page-cover{min-height:380px;display:flex;align-items:center;padding-top:var(--header-h)}
 .page-cover .container{width:100%}
+.page-cover .bg{position:absolute;inset:0;z-index:0;background-image:var(--img);background-size:cover;background-position:center;transform:scale(1.1);animation:kb 14s ease-out forwards}
+.page-cover .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,8,9,.88) 0%,rgba(14,8,9,.66) 45%,rgba(14,8,9,.2) 100%),linear-gradient(0deg,var(--tint),transparent 70%)}
+@keyframes kb{to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.page-cover .bg{animation:none;transform:none}}
 .page-cover .inner{position:relative;z-index:2;color:var(--white);max-width:720px}
 .crumbs{font-size:13px;color:rgba(255,255,255,.75);margin-bottom:18px;letter-spacing:.04em}
 .crumbs a:hover{color:var(--white)}
@@ -368,7 +383,8 @@ section,[id]{scroll-margin-top:var(--header-h)}
   .tiles,.other,.f-grid,.scope-list,.row2{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:1fr 1fr;gap:14px}
   .svc-card .svc-img{height:130px}
-  .svc-card .svc-img .ic svg{width:44px;height:44px}
+  .svc-card .svc-img .ic{width:34px;height:34px;top:10px;right:10px}
+  .svc-card .svc-img .ic svg{width:16px;height:16px}
   .svc-card .svc-text{margin:-24px 8px 0;padding:14px 10px}
   .svc-card h3{font-size:15px}
   .svc-card p{display:none}
@@ -463,8 +479,8 @@ section,[id]{scroll-margin-top:var(--header-h)}
 
   <!-- hero slider -->
   <section class="hero" id="home" aria-label="Introduction">
-    <div class="slide cover overlay active" style="--c1:#7A2430;--c2:#2A0F14">
-      <div class="watermark"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
+    <div class="slide cover active" style="--c1:#7A2430;--c2:#2A0F14">
+      <div class="bg" role="img" aria-label="Abu Dhabi skyline across the water" style="--img:url('https://images.unsplash.com/photo-1603565095944-2a6f33bb517c?auto=format&fit=crop&w=1920&q=75');--tint:rgba(122,36,48,.38)"></div>
       <div class="inner">
         <span class="kicker">Abu Dhabi &middot; Est. 2024</span>
         <h1>Facilities management, <span class="serif">engineered</span> end to end</h1>
@@ -472,8 +488,8 @@ section,[id]{scroll-margin-top:var(--header-h)}
         <div class="actions"><a href="#contact" class="btn btn-primary">Request a site visit</a><a href="#services" class="btn btn-white">Our services</a></div>
       </div>
     </div>
-    <div class="slide cover overlay" style="--c1:#4B4844;--c2:#151210">
-      <div class="watermark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg></div>
+    <div class="slide cover" style="--c1:#4B4844;--c2:#151210">
+      <div class="bg" role="img" aria-label="Technicians measuring a block wall on site" style="--img:url('https://images.unsplash.com/photo-1694521787193-9293daeddbaa?auto=format&fit=crop&w=1920&q=75');--tint:rgba(30,26,24,.35)"></div>
       <div class="inner">
         <span class="kicker">Seven trades &middot; One contract</span>
         <h1>One call keeps your <span class="serif">building</span> running</h1>
@@ -481,8 +497,8 @@ section,[id]{scroll-margin-top:var(--header-h)}
         <div class="actions"><a href="#services" class="btn btn-primary">Explore services</a><a href="tel:+971542435240" class="btn btn-white">Call us now</a></div>
       </div>
     </div>
-    <div class="slide cover overlay" style="--c1:#3E7A5A;--c2:#132A1F">
-      <div class="watermark"><svg viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg></div>
+    <div class="slide cover" style="--c1:#3E7A5A;--c2:#132A1F">
+      <div class="bg" role="img" aria-label="Landscaped green lawn with trees and shrubs" style="--img:url('https://images.unsplash.com/photo-1668120089662-42642838cfef?auto=format&fit=crop&w=1920&q=75');--tint:rgba(30,80,55,.35)"></div>
       <div class="inner">
         <span class="kicker">Built for the UAE climate</span>
         <h1>Cleaner spaces, <span class="serif">greener</span> grounds</h1>
@@ -493,6 +509,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
     <button class="hero-arrow prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
     <button class="hero-arrow next" aria-label="Next slide"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
     <div class="hero-dots"></div>
+    <div class="hero-progress"></div>
   </section>
 
   <!-- overlapping feature tiles -->
@@ -743,21 +760,21 @@ section,[id]{scroll-margin-top:var(--header-h)}
   };
 
   var SERVICES = [
-    {id:'it-staffing',name:'IT Staffing',tag:'Staffing',c1:'#4A3B52',c2:'#1C1421',
+    {id:'it-staffing',img:'1551434678-e076c223a692',name:'IT Staffing',tag:'Staffing',c1:'#4A3B52',c2:'#1C1421',
      short:'Helpdesk, network and systems professionals placed on flexible contracts.',
      lead:'ABMS supplies qualified IT professionals — from helpdesk technicians to network engineers — so your technology operations run smoothly without the overhead of a full in-house team.',
      groups:[
       ['IT Staff Augmentation',['Helpdesk & technical support staff','Network & systems administrators','Data entry & IT operations personnel','Short-term and long-term contract placements']],
       ['Managed IT Support',['On-site and remote troubleshooting','Hardware & software maintenance','Network monitoring & uptime support','IT asset tracking & inventory']],
       ['Specialized IT Placements',['Cybersecurity & compliance staff','ERP / CRM & POS support technicians','Data center & server room technicians','Project-based technology staffing']]]},
-    {id:'civil-works',name:'Civil Works',tag:'Construction',c1:'#5E5A55',c2:'#1E1A18',
+    {id:'civil-works',img:'1694521787149-ee0b6a3d9f78',name:'Civil Works',tag:'Construction',c1:'#5E5A55',c2:'#1E1A18',
      short:'Structural repairs, finishing works and minor construction that keep a building sound.',
      lead:'Maintenance, repair and small-scale construction that keep a building safe, functional and visually acceptable over time — the built-environment side of facilities management.',
      groups:[
       ['Building maintenance & repairs',['Fixing cracks in walls, ceilings or columns','Repairing plaster, concrete or masonry','Waterproofing roofs, basements and wet areas','Addressing structural wear and tear']],
       ['Finishing works',['Painting (internal & external)','Tiling and flooring repairs','False ceiling repairs','Carpentry and joinery']],
       ['Minor construction & modifications',['Partitioning and office reconfiguration','Creating new rooms or modifying layouts','Ramps, handrails and accessibility features']]]},
-    {id:'mep',name:'MEP',tag:'Engineering',c1:'#8A2A21',c2:'#3A0F0B',
+    {id:'mep',img:'1621905251189-08b45d6a269e',name:'MEP',tag:'Engineering',c1:'#8A2A21',c2:'#3A0F0B',
      short:'Mechanical, electrical, plumbing and A/C solutions for reliable building performance.',
      lead:'Reliable Mechanical, Electrical, Plumbing and Air Conditioning solutions — focused on quality, safety and efficiency for residential, commercial and industrial clients.',
      groups:[
@@ -765,25 +782,25 @@ section,[id]{scroll-margin-top:var(--header-h)}
       ['Electrical',['Electrical installations & upgrades','Fault finding & troubleshooting','Lighting systems & controls','Generator & backup systems']],
       ['Plumbing',['Leak detection & pipe repairs','Drain cleaning & blockage removal','Water pumps & tank maintenance','Sanitary fixture installation']],
       ['A/C Specialized',['Split & central A/C servicing','Gas refilling & performance checks','Thermostat calibration','Energy efficiency optimisation']]]},
-    {id:'cleaning-services',name:'Cleaning Services',tag:'Hygiene',c1:'#7A2430',c2:'#2A0F14',
+    {id:'cleaning-services',img:'1627905646269-7f034dcc5738',name:'Cleaning Services',tag:'Hygiene',c1:'#7A2430',c2:'#2A0F14',
      short:'Office, mall and specialised cleaning using modern, eco-friendly methods.',
      lead:'High-quality cleaning that keeps offices and shopping malls hygienic and welcoming — trained teams, modern equipment and eco-friendly products.',
      groups:[
       ['Office Cleaning',['Daily & periodic office cleaning','Workstation & desk sanitisation','Carpet & upholstery cleaning','Floor polishing & maintenance','Washroom cleaning & hygiene control','Trash removal & recycling']],
       ['Shopping Mall Cleaning',['Corridors & entrances','Escalator & elevator cleaning','Glass & façade cleaning','Food court cleaning & waste management','Parking area cleaning','High-traffic area sanitisation']],
       ['Specialized Cleaning',['Deep cleaning & disinfection','Glass & window cleaning','Floor scrubbing, polishing & buffing','Post-construction cleaning','Move-in / move-out cleaning']]]},
-    {id:'landscaping',name:'Landscaping & Gardens',tag:'Outdoor',c1:'#3E7A5A',c2:'#132A1F',
+    {id:'landscaping',img:'1621272156568-7306716648df',name:'Landscaping & Gardens',tag:'Outdoor',c1:'#3E7A5A',c2:'#132A1F',
      short:'Garden design, installation and maintenance built for the UAE climate.',
      lead:'Landscape design, installation and garden maintenance planned around the UAE\'s heat, soil and water conditions.',
      groups:[
       ['Design & Installation',['Garden design & planning','Hardscaping — patios, pathways, pergolas, decking','Softscaping — plants, trees, lawns','Irrigation systems (incl. drip irrigation)','Outdoor lighting','Water features — fountains, ponds']],
       ['Garden Maintenance',['Lawn mowing and edging','Tree and shrub pruning','Weed control','Fertilising and soil care','Pest and disease management','Irrigation checks and repairs','Seasonal planting and cleanup']]]},
-    {id:'pest-control',name:'Pest Control',tag:'Protection',c1:'#C97656',c2:'#5A2A18',
+    {id:'pest-control',img:'1747659629851-a92bd71149f6',name:'Pest Control',tag:'Protection',c1:'#C97656',c2:'#5A2A18',
      short:'Safe, effective pest management for residential, commercial and industrial sites.',
      lead:'Safe, effective and environmentally responsible pest control — trained specialists and modern treatments for pest-free residential, commercial and industrial environments.',
      groups:[
       ['Treatments',['General pest control — cockroaches, ants, flies, spiders','Rodent control — rats and mice','Termite inspection and treatment','Bed bug treatment','Mosquito control','Disinfection and sanitisation']]]},
-    {id:'car-cleaning',name:'Car Cleaning',tag:'Mobile',c1:'#3C7A8C',c2:'#132C35',
+    {id:'car-cleaning',img:'1633014041037-f5446fb4ce99',name:'Car Cleaning',tag:'Mobile',c1:'#3C7A8C',c2:'#132C35',
      short:'On-site car washing and detailing for residences, offices and company fleets.',
      lead:'Professional car washing and detailing for residential compounds, corporate offices and company fleets across Abu Dhabi — no in-house team needed.',
      groups:[
@@ -798,6 +815,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
     ['Abu Dhabi Manpower Supply'],['Trogan General Contracting'],['Adeeb Electrical & Electronics Services Co.'],['Marina Facilities Management']
   ];
 
+  function photo(s,w){ return 'https://images.unsplash.com/photo-'+s.img+'?auto=format&fit=crop&w='+w+'&q=72'; }
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
   function svg(id){return '<svg viewBox="0 0 24 24">'+ICONS[id]+'</svg>';}
   function waLink(msg){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
@@ -805,7 +823,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
   function initials(n){return n.replace(/[^A-Za-z0-9 ]/g,'').split(' ').filter(Boolean).slice(0,2).map(function(w){return w[0];}).join('').toUpperCase();}
   function card(s,i){
     return '<a class="svc-card reveal" href="#service/'+s.id+'">'+
-      '<div class="svc-img"><div class="cover" style="--c1:'+s.c1+';--c2:'+s.c2+'"></div><span class="num">'+String(i+1).padStart(2,'0')+'</span><div class="ic">'+svg(s.id)+'</div></div>'+
+      '<div class="svc-img"><div class="cover has-img" role="img" aria-label="'+esc(s.name)+'" style="--c1:'+s.c1+';--c2:'+s.c2+';--img:url(\''+photo(s,720)+'\')"></div><span class="num">'+String(i+1).padStart(2,'0')+'</span><div class="ic" style="background:'+s.c1+'">'+svg(s.id)+'</div></div>'+
       '<div class="svc-text"><strong>'+esc(s.tag)+'</strong><h3>'+esc(s.name)+'</h3><p>'+esc(s.short)+'</p><span class="go">View scope &rarr;</span></div></a>';
   }
 
@@ -831,8 +849,8 @@ section,[id]{scroll-margin-top:var(--header-h)}
     var others = SERVICES.filter(function(o){return o.id!==s.id;}).slice(0,6);
     var total = s.groups.reduce(function(a,g){return a+g[1].length;},0);
     var html =
-      '<section class="page-cover cover overlay" style="--c1:'+s.c1+';--c2:'+s.c2+'">'+
-        '<div class="watermark">'+svg(s.id)+'</div>'+
+      '<section class="page-cover cover has-img" style="--c1:'+s.c1+';--c2:'+s.c2+'">'+
+        '<div class="bg" role="img" aria-label="'+esc(s.name)+'" style="--img:url(\''+photo(s,1920)+'\');--tint:'+s.c1+'99"></div>'+
         '<div class="container"><div class="inner">'+
           '<div class="crumbs"><a href="#home">Home</a> &nbsp;/&nbsp; <a href="#services">Services</a> &nbsp;/&nbsp; '+esc(s.name)+'</div>'+
           '<h1>'+esc(s.name)+'</h1><p>'+esc(s.lead)+'</p>'+
@@ -928,8 +946,15 @@ section,[id]{scroll-margin-top:var(--header-h)}
     slides[cur].classList.remove('active'); dotsWrap.children[cur].classList.remove('active');
     cur = (i + slides.length) % slides.length;
     slides[cur].classList.add('active'); dotsWrap.children[cur].classList.add('active');
+    var pb = document.querySelector('.hero-progress'); pb.classList.remove('run'); void pb.offsetWidth; pb.classList.add('run');
     clearInterval(timer); timer = setInterval(function(){ go(cur+1); }, 6500);
   }
+  var heroEl = document.querySelector('.hero');
+  heroEl.addEventListener('mouseenter', function(){ clearInterval(timer); document.querySelector('.hero-progress').style.animationPlayState='paused'; });
+  heroEl.addEventListener('mouseleave', function(){
+    var pb = document.querySelector('.hero-progress'); pb.style.animationPlayState=''; pb.classList.remove('run'); void pb.offsetWidth; pb.classList.add('run');
+    clearInterval(timer); timer = setInterval(function(){ go(cur+1); }, 6500);
+  });
   document.querySelector('.hero-arrow.prev').addEventListener('click', function(){ go(cur-1); });
   document.querySelector('.hero-arrow.next').addEventListener('click', function(){ go(cur+1); });
   go(0);
