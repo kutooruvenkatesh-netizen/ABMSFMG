@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
-<title>ABMS Facilities Management Services  L.L.C S.P.C — Abu Dhabi</title>
+<title>ABMS Facilities Management Services L.L.C S.P.C — Abu Dhabi</title>
 <meta name="description" content="Civil works, MEP, cleaning, landscaping and pest control for commercial, residential and industrial clients in Abu Dhabi, UAE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +12,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root{
-  --red:#E23A2E;
-  --red-dark:#A8241B;
-  --red-deep:#7E1A14;
-  --peach:#F0A98C;
-  --peach-soft:#F7D8C9;
+  --red:#7A2430;
+  --red-dark:#5C1A23;
+  --red-deep:#3F1017;
+  --peach:#D4B06A;
+  --peach-soft:#E8D4A8;
   --ink:#211B18;
   --ink-soft:#5B514C;
   --paper:#FBF7F3;
@@ -219,11 +219,13 @@ nav.links > a:hover, nav.links > a.active{color:var(--red);}
   text-align:center;letter-spacing:0.02em;text-transform:uppercase;padding:0 8px;font-weight:500;
   line-height:1.35;max-width:82px;
 }
+.strip.s0{background:linear-gradient(160deg,#4A3B52,#2A2030);}
 .strip.s1{background:linear-gradient(160deg,#4B4844,#211B18);}
 .strip.s2{background:linear-gradient(160deg,#8A2A21,#5C1B15);}
 .strip.s3{background:linear-gradient(160deg,var(--red),var(--red-dark));}
 .strip.s4{background:linear-gradient(160deg,#3E7A5A,#2A5540);}
 .strip.s5{background:linear-gradient(160deg,var(--peach),#C97656);}
+.strip.s6{background:linear-gradient(160deg,#3C7A8C,#1F4552);}
 
 /* ---------- stat strip ---------- */
 .stats{background:var(--ink);color:var(--paper);padding:26px 0;}
@@ -320,6 +322,15 @@ nav.links > a:hover, nav.links > a.active{color:var(--red);}
 .related-card .rc-icon svg{width:16px;height:16px;stroke:var(--white);fill:none;stroke-width:1.7;}
 .related-card h4{font-size:15px;}
 .related-card span.mono{font-size:10px;color:var(--red-dark);}
+
+.chip-row{display:flex;flex-wrap:wrap;gap:12px;}
+.chip{
+  display:inline-flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--line);
+  padding:11px 18px;border-radius:30px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+  letter-spacing:0.03em;color:var(--ink);transition:border-color .2s, transform .2s, box-shadow .2s;
+}
+.chip:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(33,27,24,0.25);border-color:var(--ink);}
+.chip-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
 
 /* ---------- clients ---------- */
 .clients{background:var(--paper-dim);padding:90px 0;}
@@ -471,25 +482,33 @@ html.no-js [hidden]{display:block;}
           <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
         </button>
         <div class="dropdown-menu">
+          <a href="#it-staffing" class="route-link route-indicator" data-route="it-staffing">
+            <span class="dot" style="background:#4A3B52"></span>
+            <span class="dd-text">IT Staffing<small>01 &mdash; View details</small></span>
+          </a>
           <a href="#civil-works" class="route-link route-indicator" data-route="civil-works">
             <span class="dot" style="background:#4B4844"></span>
-            <span class="dd-text">Civil Works<small> View details</small></span>
+            <span class="dd-text">Civil Works<small>02 &mdash; View details</small></span>
           </a>
           <a href="#mep" class="route-link route-indicator" data-route="mep">
             <span class="dot" style="background:#8A2A21"></span>
-            <span class="dd-text">MEP<small> View details</small></span>
+            <span class="dd-text">MEP<small>03 &mdash; View details</small></span>
           </a>
           <a href="#cleaning-services" class="route-link route-indicator" data-route="cleaning-services">
-            <span class="dot" style="background:#E23A2E"></span>
-            <span class="dd-text">Cleaning Services<small> View details</small></span>
+            <span class="dot" style="background:#7A2430"></span>
+            <span class="dd-text">Cleaning Services<small>04 &mdash; View details</small></span>
           </a>
           <a href="#landscaping" class="route-link route-indicator" data-route="landscaping">
             <span class="dot" style="background:#3E7A5A"></span>
-            <span class="dd-text">Landscaping & Gardens<small> View details</small></span>
+            <span class="dd-text">Landscaping &amp; Gardens<small>05 &mdash; View details</small></span>
           </a>
           <a href="#pest-control" class="route-link route-indicator" data-route="pest-control">
             <span class="dot" style="background:#C97656"></span>
-            <span class="dd-text">Pest Control<small> View details</small></span>
+            <span class="dd-text">Pest Control<small>06 &mdash; View details</small></span>
+          </a>
+          <a href="#car-cleaning" class="route-link route-indicator" data-route="car-cleaning">
+            <span class="dot" style="background:#3C7A8C"></span>
+            <span class="dd-text">Car Cleaning<small>07 &mdash; View details</small></span>
           </a>
           <hr>
           <a class="view-all route-link" data-route="home" href="#services">View all services</a>
@@ -507,7 +526,7 @@ html.no-js [hidden]{display:block;}
   <div class="mobile-menu">
     <a href="#about" class="route-link" data-route="home">About</a>
     <a href="#services" class="route-link" data-route="home">Services</a>
-    <div class="mm-sub"><a href="#civil-works" class="route-link route-indicator" data-route="civil-works">Civil Works</a><a href="#mep" class="route-link route-indicator" data-route="mep">MEP</a><a href="#cleaning-services" class="route-link route-indicator" data-route="cleaning-services">Cleaning Services</a><a href="#landscaping" class="route-link route-indicator" data-route="landscaping">Landscaping & Gardens</a><a href="#pest-control" class="route-link route-indicator" data-route="pest-control">Pest Control</a></div>
+    <div class="mm-sub"><a href="#it-staffing" class="route-link route-indicator" data-route="it-staffing">IT Staffing</a><a href="#civil-works" class="route-link route-indicator" data-route="civil-works">Civil Works</a><a href="#mep" class="route-link route-indicator" data-route="mep">MEP</a><a href="#cleaning-services" class="route-link route-indicator" data-route="cleaning-services">Cleaning Services</a><a href="#landscaping" class="route-link route-indicator" data-route="landscaping">Landscaping &amp; Gardens</a><a href="#pest-control" class="route-link route-indicator" data-route="pest-control">Pest Control</a><a href="#car-cleaning" class="route-link route-indicator" data-route="car-cleaning">Car Cleaning</a></div>
     <a href="#clients" class="route-link" data-route="home">Clients</a>
     <a href="#contact" class="route-link" data-route="home">Contact</a>
   </div>
@@ -519,32 +538,40 @@ html.no-js [hidden]{display:block;}
       <div>
         <div class="eyebrow">Company Profile · Abu Dhabi, UAE</div>
         <h1>Facilities<br>management,<br><em>engineered</em> end to end.</h1>
-        <p class="lead">ABMS Facilities Management Services L.L.C S.P.C. was established in 2024 in the Emirate of Abu Dhabi, delivering civil works, MEP, cleaning, landscaping and pest control to commercial, residential and industrial clients across the region.</p>
+        <p class="lead">ABMS Facilities Management Services L.L.C S.P.C. was established in 2024 in the Emirate of Abu Dhabi, delivering IT staffing, civil works, MEP, cleaning, landscaping, pest control and car cleaning to commercial, residential and industrial clients across the region.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn-solid">Request a site visit ↗</a>
           <a href="#services" class="btn-outline">View services</a>
         </div>
       </div>
       <div class="strip-panel reveal">
+        <a href="#it-staffing" class="strip s0 route-link" data-route="it-staffing">
+          <svg viewBox="0 0 24 24" class="icon"><circle cx="9" cy="8" r="3"/><path d="M4 20c0-3 2-5 5-5s5 2 5 5"/><circle cx="17" cy="9" r="2.3"/><path d="M15 20c0-2.5 1-4.3 3-4.8"/></svg>
+          <div class="label">IT Staffing</div>
+        </a>
         <a href="#civil-works" class="strip s1 route-link" data-route="civil-works">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg>
+          <svg viewBox="0 0 24 24" class="icon"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg>
           <div class="label">Civil Works</div>
         </a>
         <a href="#mep" class="strip s2 route-link" data-route="mep">
-          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg>
+          <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg>
           <div class="label">MEP</div>
         </a>
         <a href="#cleaning-services" class="strip s3 route-link" data-route="cleaning-services">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg>
+          <svg viewBox="0 0 24 24" class="icon"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg>
           <div class="label">Cleaning Services</div>
         </a>
         <a href="#landscaping" class="strip s4 route-link" data-route="landscaping">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg>
-          <div class="label">Landscaping<br>&amp; Gardens</div>
+          <svg viewBox="0 0 24 24" class="icon"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg>
+          <div class="label">Landscaping &amp;<br> Gardens</div>
         </a>
         <a href="#pest-control" class="strip s5 route-link" data-route="pest-control">
-          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
           <div class="label">Pest Control</div>
+        </a>
+        <a href="#car-cleaning" class="strip s6 route-link" data-route="car-cleaning">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M3 13l2-5a2 2 0 012-1h10a2 2 0 012 1l2 5"/><path d="M3 13h18v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4z"/><circle cx="7.5" cy="18" r="1.3"/><circle cx="16.5" cy="18" r="1.3"/></svg>
+          <div class="label">Car Cleaning</div>
         </a>
       </div>
     </div>
@@ -553,8 +580,8 @@ html.no-js [hidden]{display:block;}
   <div class="stats">
     <div class="wrap">
       <div class="stat"><b>2024</b><span>Founded in Abu Dhabi</span></div>
-      <!--<div class="stat"><b>> </b><span>Core service lines</span></div>
-      <div class="stat"><b>> </b><span>Organizations served</span></div>-->
+      <div class="stat"><b>07</b><span>Service lines</span></div>
+      <div class="stat"><b>16</b><span>Organizations served</span></div>
       <div class="stat"><b>L.L.C&nbsp;S.P.C</b><span>Licensed entity</span></div>
     </div>
   </div>
@@ -567,7 +594,7 @@ html.no-js [hidden]{display:block;}
       <h2>Fast, reliable facilities management, built around your building's real demands.</h2>
       <div class="about-grid">
         <div>
-            <p>ABMS Facilities Management Services L.L.C. S.P.C. provides professional facilities management services across a wide range of sectors — civil works, MEP, commercial and deep cleaning, gardening, and pest control.</p>
+            <p>ABMS Facilities Management Services L.L.C. S.P.C. provides professional facilities management services across a wide range of sectors — IT staffing, civil works, MEP, commercial and deep cleaning, gardening, pest control and car cleaning.</p>
           <p>We're committed to meeting the changing demands of our clients with fast, efficient, and reliable service, aiming for high quality and complete satisfaction on every job.</p>
         </div>
         <div class="vm-grid">
@@ -595,44 +622,58 @@ html.no-js [hidden]{display:block;}
     <div class="wrap">
       <div class="services-head reveal">
         <span class="section-tag">What we do</span>
-        <h2>Multiple service lines, one point of contact.</h2>
+        <h2>Seven service lines, one point of contact.</h2>
         <p>From structural repairs to a spotless lobby floor, every trade below is delivered and supervised in-house. Click through for the full scope of each service.</p>
       </div>
       <div class="service-cards">
       <div class="service-card reveal">
+        <div class="sc-icon" style="background:#4A3B52"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M4 20c0-3 2-5 5-5s5 2 5 5"/><circle cx="17" cy="9" r="2.3"/><path d="M15 20c0-2.5 1-4.3 3-4.8"/></svg></div>
+        <span class="sc-num">01</span>
+        <h3>IT Staffing</h3>
+        <p>Skilled IT professionals &mdash; helpdesk, network and systems support &mdash; placed on flexible contracts.</p>
+        <a class="sc-link route-link" data-route="it-staffing" href="#it-staffing">View details &rarr;</a>
+      </div>
+      <div class="service-card reveal">
         <div class="sc-icon" style="background:#4B4844"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
-        <span class="sc-num"></span>
+        <span class="sc-num">02</span>
         <h3>Civil Works</h3>
         <p>Structural repairs, finishing works and minor construction that keep a building sound.</p>
         <a class="sc-link route-link" data-route="civil-works" href="#civil-works">View details &rarr;</a>
       </div>
       <div class="service-card reveal">
         <div class="sc-icon" style="background:#8A2A21"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg></div>
-        <span class="sc-num"></span>
+        <span class="sc-num">03</span>
         <h3>MEP</h3>
         <p>Mechanical, electrical, plumbing and A/C solutions for reliable building performance.</p>
         <a class="sc-link route-link" data-route="mep" href="#mep">View details &rarr;</a>
       </div>
       <div class="service-card reveal">
-        <div class="sc-icon" style="background:#E23A2E"><svg viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></div>
-        <span class="sc-num"></span>
+        <div class="sc-icon" style="background:#7A2430"><svg viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></div>
+        <span class="sc-num">04</span>
         <h3>Cleaning Services</h3>
         <p>High-quality office, mall and specialized cleaning using modern, eco-friendly methods.</p>
         <a class="sc-link route-link" data-route="cleaning-services" href="#cleaning-services">View details &rarr;</a>
       </div>
       <div class="service-card reveal">
         <div class="sc-icon" style="background:#3E7A5A"><svg viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg></div>
-        <span class="sc-num"></span>
-        <h3>Landscaping & Gardens</h3>
+        <span class="sc-num">05</span>
+        <h3>Landscaping &amp; Gardens</h3>
         <p>Garden design, installation and ongoing maintenance built for the UAE climate.</p>
         <a class="sc-link route-link" data-route="landscaping" href="#landscaping">View details &rarr;</a>
       </div>
       <div class="service-card reveal">
         <div class="sc-icon" style="background:#C97656"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
-        <span class="sc-num"></span>
+        <span class="sc-num">06</span>
         <h3>Pest Control</h3>
         <p>Safe, effective pest management for residential, commercial and industrial sites.</p>
         <a class="sc-link route-link" data-route="pest-control" href="#pest-control">View details &rarr;</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-icon" style="background:#3C7A8C"><svg viewBox="0 0 24 24"><path d="M3 13l2-5a2 2 0 012-1h10a2 2 0 012 1l2 5"/><path d="M3 13h18v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4z"/><circle cx="7.5" cy="18" r="1.3"/><circle cx="16.5" cy="18" r="1.3"/></svg></div>
+        <span class="sc-num">07</span>
+        <h3>Car Cleaning</h3>
+        <p>On-site car washing and detailing for residences, offices and company fleets.</p>
+        <a class="sc-link route-link" data-route="car-cleaning" href="#car-cleaning">View details &rarr;</a>
       </div>
       </div>
     </div>
@@ -668,16 +709,65 @@ html.no-js [hidden]{display:block;}
     </div>
   </section>
 </div>
-<div class="route-section" data-route="civil-works" hidden>
-  <section class="service-hero" style="background:linear-gradient(160deg,#4B4844,#211B18)">
+<div class="route-section" data-route="it-staffing" hidden>
+  <section class="service-hero" style="background:linear-gradient(160deg,#4A3B52,#2A2030)">
     <div class="num-tag">01</div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / IT Staffing</div>
+      <div class="service-hero-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M4 20c0-3 2-5 5-5s5 2 5 5"/><circle cx="17" cy="9" r="2.3"/><path d="M15 20c0-2.5 1-4.3 3-4.8"/></svg></div>
+      <h1>IT Staffing</h1>
+      <p class="lead">ABMS supplies qualified IT professionals &mdash; from helpdesk technicians to network engineers &mdash; so your technology operations run smoothly without the overhead of a full in-house team.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20IT%20Staffing." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp &#8599;</a>
+        <a href="#services" class="btn-ghost route-link" data-route="home">All services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="wrap">
+      <span class="section-tag mono" style="color:#4A3B52">Full scope</span>
+      <div class="detail-block reveal">
+        <h2>IT Staff Augmentation</h2>
+        <div class="detail-cols"><ul><li>Helpdesk &amp; technical support staff</li><li>Network &amp; systems administrators</li><li>Data entry &amp; IT operations personnel</li><li>Short-term and long-term contract placements</li></ul></div>
+      </div>
+      <div class="detail-block reveal">
+        <h2>Managed IT Support</h2>
+        <div class="detail-cols"><ul><li>On-site and remote troubleshooting</li><li>Hardware &amp; software maintenance</li><li>Network monitoring &amp; uptime support</li><li>IT asset tracking &amp; inventory</li></ul></div>
+      </div>
+      <div class="detail-block reveal">
+        <h2>Specialized IT Placements</h2>
+        <div class="detail-cols"><ul><li>Cybersecurity &amp; compliance staff</li><li>ERP / CRM &amp; POS support technicians</li><li>Data center &amp; server room technicians</li><li>Project-based technology staffing</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="wrap">
+      <div class="related-head reveal">
+        <span class="section-tag" style="color:var(--red-dark)">Explore more</span>
+        <h2>Other services from ABMS</h2>
+      </div>
+      <div class="chip-row reveal">
+        <a class="chip route-link" data-route="civil-works" href="#civil-works"><span class="chip-dot" style="background:#4B4844"></span>Civil Works</a>
+        <a class="chip route-link" data-route="mep" href="#mep"><span class="chip-dot" style="background:#8A2A21"></span>MEP</a>
+        <a class="chip route-link" data-route="cleaning-services" href="#cleaning-services"><span class="chip-dot" style="background:#7A2430"></span>Cleaning Services</a>
+        <a class="chip route-link" data-route="landscaping" href="#landscaping"><span class="chip-dot" style="background:#3E7A5A"></span>Landscaping &amp; Gardens</a>
+        <a class="chip route-link" data-route="pest-control" href="#pest-control"><span class="chip-dot" style="background:#C97656"></span>Pest Control</a>
+        <a class="chip route-link" data-route="car-cleaning" href="#car-cleaning"><span class="chip-dot" style="background:#3C7A8C"></span>Car Cleaning</a>
+      </div>
+    </div>
+  </section>
+</div><div class="route-section" data-route="civil-works" hidden>
+  <section class="service-hero" style="background:linear-gradient(160deg,#4B4844,#211B18)">
+    <div class="num-tag">02</div>
     <div class="wrap">
       <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / Civil Works</div>
       <div class="service-hero-icon"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
       <h1>Civil Works</h1>
-      <p class="lead">Civil works in facility management covers the maintenance, repair and small-scale construction activities that keep a building safe, functional and visually acceptable over time — the “built environment” side of facilities management.</p>
+      <p class="lead">Civil works in facility management covers the maintenance, repair and small-scale construction activities that keep a building safe, functional and visually acceptable over time &mdash; the “built environment” side of facilities management.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Civil%20Works." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp ↗</a>
+        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Civil%20Works." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp &#8599;</a>
         <a href="#services" class="btn-ghost route-link" data-route="home">All services</a>
       </div>
     </div>
@@ -687,15 +777,15 @@ html.no-js [hidden]{display:block;}
     <div class="wrap">
       <span class="section-tag mono" style="color:#4B4844">Full scope</span>
       <div class="detail-block reveal">
-        <h2>Building maintenance & repairs</h2>
+        <h2>Building maintenance &amp; repairs</h2>
         <div class="detail-cols"><ul><li>Fixing cracks in walls, ceilings, or columns</li><li>Repairing plaster, concrete, or masonry</li><li>Waterproofing roofs, basements, and wet areas</li><li>Addressing structural wear and tear</li></ul></div>
       </div>
       <div class="detail-block reveal">
         <h2>Finishing works</h2>
-        <div class="detail-cols"><ul><li>Painting (internal & external)</li><li>Tiling and flooring repairs (ceramic, marble, vinyl, etc.)</li><li>False ceiling repairs</li><li>Carpentry and joinery (doors, cabinets, partitions)</li></ul></div>
+        <div class="detail-cols"><ul><li>Painting (internal &amp; external)</li><li>Tiling and flooring repairs (ceramic, marble, vinyl, etc.)</li><li>False ceiling repairs</li><li>Carpentry and joinery (doors, cabinets, partitions)</li></ul></div>
       </div>
       <div class="detail-block reveal">
-        <h2>Minor construction & modifications</h2>
+        <h2>Minor construction &amp; modifications</h2>
         <div class="detail-cols"><ul><li>Partitioning spaces (e.g., office reconfiguration)</li><li>Creating new rooms or modifying layouts</li><li>Installing ramps, handrails, or accessibility features</li></ul></div>
       </div>
     </div>
@@ -707,40 +797,26 @@ html.no-js [hidden]{display:block;}
         <span class="section-tag" style="color:var(--red-dark)">Explore more</span>
         <h2>Other services from ABMS</h2>
       </div>
-      <div class="related-grid reveal">
-      <a class="related-card route-link" data-route="mep" href="#mep">
-        <div class="rc-icon" style="background:#8A2A21"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg></div>
-        <h4>MEP</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="cleaning-services" href="#cleaning-services">
-        <div class="rc-icon" style="background:#E23A2E"><svg viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></div>
-        <h4>Cleaning Services</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="landscaping" href="#landscaping">
-        <div class="rc-icon" style="background:#3E7A5A"><svg viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg></div>
-        <h4>Landscaping & Gardens</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="pest-control" href="#pest-control">
-        <div class="rc-icon" style="background:#C97656"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
-        <h4>Pest Control</h4>
-        <span class="mono">View details</span>
-      </a>
+      <div class="chip-row reveal">
+        <a class="chip route-link" data-route="it-staffing" href="#it-staffing"><span class="chip-dot" style="background:#4A3B52"></span>IT Staffing</a>
+        <a class="chip route-link" data-route="mep" href="#mep"><span class="chip-dot" style="background:#8A2A21"></span>MEP</a>
+        <a class="chip route-link" data-route="cleaning-services" href="#cleaning-services"><span class="chip-dot" style="background:#7A2430"></span>Cleaning Services</a>
+        <a class="chip route-link" data-route="landscaping" href="#landscaping"><span class="chip-dot" style="background:#3E7A5A"></span>Landscaping &amp; Gardens</a>
+        <a class="chip route-link" data-route="pest-control" href="#pest-control"><span class="chip-dot" style="background:#C97656"></span>Pest Control</a>
+        <a class="chip route-link" data-route="car-cleaning" href="#car-cleaning"><span class="chip-dot" style="background:#3C7A8C"></span>Car Cleaning</a>
       </div>
     </div>
   </section>
 </div><div class="route-section" data-route="mep" hidden>
   <section class="service-hero" style="background:linear-gradient(160deg,#8A2A21,#5C1B15)">
-    <div class="num-tag">02</div>
+    <div class="num-tag">03</div>
     <div class="wrap">
       <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / MEP</div>
       <div class="service-hero-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg></div>
       <h1>MEP</h1>
       <p class="lead">We deliver reliable Mechanical, Electrical, Plumbing and Air Conditioning (A/C) solutions. With a focus on quality, safety and efficiency, we help maintain and enhance building performance for residential, commercial and industrial clients.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20MEP." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp ↗</a>
+        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20MEP." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp &#8599;</a>
         <a href="#services" class="btn-ghost route-link" data-route="home">All services</a>
       </div>
     </div>
@@ -751,19 +827,19 @@ html.no-js [hidden]{display:block;}
       <span class="section-tag mono" style="color:#8A2A21">Full scope</span>
       <div class="detail-block reveal">
         <h2>Mechanical (HVAC Services)</h2>
-        <div class="detail-cols"><ul><li>A/C installation, repair & maintenance</li><li>Chiller & cooling system servicing</li><li>Ventilation & duct cleaning</li><li>Preventive maintenance contracts</li></ul></div>
+        <div class="detail-cols"><ul><li>A/C installation, repair &amp; maintenance</li><li>Chiller &amp; cooling system servicing</li><li>Ventilation &amp; duct cleaning</li><li>Preventive maintenance contracts</li></ul></div>
       </div>
       <div class="detail-block reveal">
         <h2>Electrical Services</h2>
-        <div class="detail-cols"><ul><li>Electrical installations & upgrades</li><li>Fault finding & troubleshooting</li><li>Lighting systems & controls</li><li>Generator & backup systems</li></ul></div>
+        <div class="detail-cols"><ul><li>Electrical installations &amp; upgrades</li><li>Fault finding &amp; troubleshooting</li><li>Lighting systems &amp; controls</li><li>Generator &amp; backup systems</li></ul></div>
       </div>
       <div class="detail-block reveal">
         <h2>Plumbing Services</h2>
-        <div class="detail-cols"><ul><li>Leak detection & pipe repairs</li><li>Drain cleaning & blockage removal</li><li>Water pumps & tank maintenance</li><li>Sanitary fixture installation</li></ul></div>
+        <div class="detail-cols"><ul><li>Leak detection &amp; pipe repairs</li><li>Drain cleaning &amp; blockage removal</li><li>Water pumps &amp; tank maintenance</li><li>Sanitary fixture installation</li></ul></div>
       </div>
       <div class="detail-block reveal">
         <h2>A/C Specialized Services</h2>
-        <div class="detail-cols"><ul><li>Split & central A/C servicing</li><li>Gas refilling & performance checks</li><li>Thermostat calibration</li><li>Energy efficiency optimization</li></ul></div>
+        <div class="detail-cols"><ul><li>Split &amp; central A/C servicing</li><li>Gas refilling &amp; performance checks</li><li>Thermostat calibration</li><li>Energy efficiency optimization</li></ul></div>
       </div>
     </div>
   </section>
@@ -774,40 +850,26 @@ html.no-js [hidden]{display:block;}
         <span class="section-tag" style="color:var(--red-dark)">Explore more</span>
         <h2>Other services from ABMS</h2>
       </div>
-      <div class="related-grid reveal">
-      <a class="related-card route-link" data-route="civil-works" href="#civil-works">
-        <div class="rc-icon" style="background:#4B4844"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h4>Civil Works</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="cleaning-services" href="#cleaning-services">
-        <div class="rc-icon" style="background:#E23A2E"><svg viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></div>
-        <h4>Cleaning Services</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="landscaping" href="#landscaping">
-        <div class="rc-icon" style="background:#3E7A5A"><svg viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg></div>
-        <h4>Landscaping & Gardens</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="pest-control" href="#pest-control">
-        <div class="rc-icon" style="background:#C97656"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
-        <h4>Pest Control</h4>
-        <span class="mono">View details</span>
-      </a>
+      <div class="chip-row reveal">
+        <a class="chip route-link" data-route="it-staffing" href="#it-staffing"><span class="chip-dot" style="background:#4A3B52"></span>IT Staffing</a>
+        <a class="chip route-link" data-route="civil-works" href="#civil-works"><span class="chip-dot" style="background:#4B4844"></span>Civil Works</a>
+        <a class="chip route-link" data-route="cleaning-services" href="#cleaning-services"><span class="chip-dot" style="background:#7A2430"></span>Cleaning Services</a>
+        <a class="chip route-link" data-route="landscaping" href="#landscaping"><span class="chip-dot" style="background:#3E7A5A"></span>Landscaping &amp; Gardens</a>
+        <a class="chip route-link" data-route="pest-control" href="#pest-control"><span class="chip-dot" style="background:#C97656"></span>Pest Control</a>
+        <a class="chip route-link" data-route="car-cleaning" href="#car-cleaning"><span class="chip-dot" style="background:#3C7A8C"></span>Car Cleaning</a>
       </div>
     </div>
   </section>
 </div><div class="route-section" data-route="cleaning-services" hidden>
-  <section class="service-hero" style="background:linear-gradient(160deg,#E23A2E,#A8241B)">
-    <div class="num-tag">03</div>
+  <section class="service-hero" style="background:linear-gradient(160deg,#7A2430,#5C1A23)">
+    <div class="num-tag">04</div>
     <div class="wrap">
       <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / Cleaning Services</div>
       <div class="service-hero-icon"><svg viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></div>
       <h1>Cleaning Services</h1>
       <p class="lead">We provide high-quality general cleaning services designed to maintain clean, hygienic and welcoming environments for offices and shopping malls. Our trained team uses modern equipment and eco-friendly products to ensure the highest standards of cleanliness and safety.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Cleaning%20Services." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp ↗</a>
+        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Cleaning%20Services." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp &#8599;</a>
         <a href="#services" class="btn-ghost route-link" data-route="home">All services</a>
       </div>
     </div>
@@ -815,18 +877,18 @@ html.no-js [hidden]{display:block;}
 
   <section class="detail-section">
     <div class="wrap">
-      <span class="section-tag mono" style="color:#E23A2E">Full scope</span>
+      <span class="section-tag mono" style="color:#7A2430">Full scope</span>
       <div class="detail-block reveal">
         <h2>Office Cleaning Services</h2>
-        <div class="detail-cols"><ul><li>Daily & periodic office cleaning</li><li>Workstation & desk sanitization</li><li>Carpet & upholstery cleaning</li><li>Floor polishing & maintenance</li><li>Washroom cleaning & hygiene control</li><li>Trash removal & recycling</li></ul></div>
+        <div class="detail-cols"><ul><li>Daily &amp; periodic office cleaning</li><li>Workstation &amp; desk sanitization</li><li>Carpet &amp; upholstery cleaning</li><li>Floor polishing &amp; maintenance</li><li>Washroom cleaning &amp; hygiene control</li><li>Trash removal &amp; recycling</li></ul></div>
       </div>
       <div class="detail-block reveal">
         <h2>Shopping Mall Cleaning</h2>
-        <div class="detail-cols"><ul><li>Common area cleaning (corridors, entrances)</li><li>Escalator & elevator cleaning</li><li>Glass & façade cleaning</li><li>Food court cleaning & waste management</li><li>Parking area cleaning</li><li>High-traffic area sanitization</li></ul></div>
+        <div class="detail-cols"><ul><li>Common area cleaning (corridors, entrances)</li><li>Escalator &amp; elevator cleaning</li><li>Glass &amp; façade cleaning</li><li>Food court cleaning &amp; waste management</li><li>Parking area cleaning</li><li>High-traffic area sanitization</li></ul></div>
       </div>
       <div class="detail-block reveal">
         <h2>Specialized Cleaning Services</h2>
-        <div class="detail-cols"><ul><li>Deep cleaning & disinfection</li><li>Glass & window cleaning</li><li>Floor scrubbing, polishing & buffing</li><li>Post-construction cleaning</li><li>Move-in / move-out cleaning</li></ul></div>
+        <div class="detail-cols"><ul><li>Deep cleaning &amp; disinfection</li><li>Glass &amp; window cleaning</li><li>Floor scrubbing, polishing &amp; buffing</li><li>Post-construction cleaning</li><li>Move-in / move-out cleaning</li></ul></div>
       </div>
     </div>
   </section>
@@ -837,40 +899,26 @@ html.no-js [hidden]{display:block;}
         <span class="section-tag" style="color:var(--red-dark)">Explore more</span>
         <h2>Other services from ABMS</h2>
       </div>
-      <div class="related-grid reveal">
-      <a class="related-card route-link" data-route="civil-works" href="#civil-works">
-        <div class="rc-icon" style="background:#4B4844"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h4>Civil Works</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="mep" href="#mep">
-        <div class="rc-icon" style="background:#8A2A21"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg></div>
-        <h4>MEP</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="landscaping" href="#landscaping">
-        <div class="rc-icon" style="background:#3E7A5A"><svg viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg></div>
-        <h4>Landscaping & Gardens</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="pest-control" href="#pest-control">
-        <div class="rc-icon" style="background:#C97656"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
-        <h4>Pest Control</h4>
-        <span class="mono">View details</span>
-      </a>
+      <div class="chip-row reveal">
+        <a class="chip route-link" data-route="it-staffing" href="#it-staffing"><span class="chip-dot" style="background:#4A3B52"></span>IT Staffing</a>
+        <a class="chip route-link" data-route="civil-works" href="#civil-works"><span class="chip-dot" style="background:#4B4844"></span>Civil Works</a>
+        <a class="chip route-link" data-route="mep" href="#mep"><span class="chip-dot" style="background:#8A2A21"></span>MEP</a>
+        <a class="chip route-link" data-route="landscaping" href="#landscaping"><span class="chip-dot" style="background:#3E7A5A"></span>Landscaping &amp; Gardens</a>
+        <a class="chip route-link" data-route="pest-control" href="#pest-control"><span class="chip-dot" style="background:#C97656"></span>Pest Control</a>
+        <a class="chip route-link" data-route="car-cleaning" href="#car-cleaning"><span class="chip-dot" style="background:#3C7A8C"></span>Car Cleaning</a>
       </div>
     </div>
   </section>
 </div><div class="route-section" data-route="landscaping" hidden>
   <section class="service-hero" style="background:linear-gradient(160deg,#3E7A5A,#2A5540)">
-    <div class="num-tag">04</div>
+    <div class="num-tag">05</div>
     <div class="wrap">
-      <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / Landscaping & Gardens</div>
+      <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / Landscaping &amp; Gardens</div>
       <div class="service-hero-icon"><svg viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg></div>
-      <h1>Landscaping & Gardens</h1>
-      <p class="lead">A clear breakdown of what's typically offered in landscaping and garden maintenance — especially relevant in climates like the UAE, where heat, soil and water management matter a lot.</p>
+      <h1>Landscaping &amp; Gardens</h1>
+      <p class="lead">A clear breakdown of what’s typically offered in landscaping and garden maintenance &mdash; especially relevant in climates like the UAE, where heat, soil and water management matter a lot.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Landscaping%20%26%20Gardens." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp ↗</a>
+        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Landscaping%20%26%20Gardens." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp &#8599;</a>
         <a href="#services" class="btn-ghost route-link" data-route="home">All services</a>
       </div>
     </div>
@@ -880,8 +928,8 @@ html.no-js [hidden]{display:block;}
     <div class="wrap">
       <span class="section-tag mono" style="color:#3E7A5A">Full scope</span>
       <div class="detail-block reveal">
-        <h2>Landscaping Services (Design & Installation)</h2>
-        <div class="detail-cols"><ul><li>Garden design & planning (layout, plant selection, themes)</li><li>Hardscaping (patios, pathways, pergolas, decking)</li><li>Softscaping (plants, trees, lawns)</li><li>Irrigation systems (drip irrigation is common in hot climates)</li><li>Outdoor lighting</li><li>Water features (fountains, ponds)</li></ul></div>
+        <h2>Landscaping Services (Design &amp; Installation)</h2>
+        <div class="detail-cols"><ul><li>Garden design &amp; planning (layout, plant selection, themes)</li><li>Hardscaping (patios, pathways, pergolas, decking)</li><li>Softscaping (plants, trees, lawns)</li><li>Irrigation systems (drip irrigation is common in hot climates)</li><li>Outdoor lighting</li><li>Water features (fountains, ponds)</li></ul></div>
       </div>
       <div class="detail-block reveal">
         <h2>Garden Maintenance Services</h2>
@@ -896,40 +944,26 @@ html.no-js [hidden]{display:block;}
         <span class="section-tag" style="color:var(--red-dark)">Explore more</span>
         <h2>Other services from ABMS</h2>
       </div>
-      <div class="related-grid reveal">
-      <a class="related-card route-link" data-route="civil-works" href="#civil-works">
-        <div class="rc-icon" style="background:#4B4844"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h4>Civil Works</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="mep" href="#mep">
-        <div class="rc-icon" style="background:#8A2A21"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg></div>
-        <h4>MEP</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="cleaning-services" href="#cleaning-services">
-        <div class="rc-icon" style="background:#E23A2E"><svg viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></div>
-        <h4>Cleaning Services</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="pest-control" href="#pest-control">
-        <div class="rc-icon" style="background:#C97656"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
-        <h4>Pest Control</h4>
-        <span class="mono">View details</span>
-      </a>
+      <div class="chip-row reveal">
+        <a class="chip route-link" data-route="it-staffing" href="#it-staffing"><span class="chip-dot" style="background:#4A3B52"></span>IT Staffing</a>
+        <a class="chip route-link" data-route="civil-works" href="#civil-works"><span class="chip-dot" style="background:#4B4844"></span>Civil Works</a>
+        <a class="chip route-link" data-route="mep" href="#mep"><span class="chip-dot" style="background:#8A2A21"></span>MEP</a>
+        <a class="chip route-link" data-route="cleaning-services" href="#cleaning-services"><span class="chip-dot" style="background:#7A2430"></span>Cleaning Services</a>
+        <a class="chip route-link" data-route="pest-control" href="#pest-control"><span class="chip-dot" style="background:#C97656"></span>Pest Control</a>
+        <a class="chip route-link" data-route="car-cleaning" href="#car-cleaning"><span class="chip-dot" style="background:#3C7A8C"></span>Car Cleaning</a>
       </div>
     </div>
   </section>
 </div><div class="route-section" data-route="pest-control" hidden>
   <section class="service-hero" style="background:linear-gradient(160deg,#F0A98C,#C97656)">
-    <div class="num-tag">05</div>
+    <div class="num-tag">06</div>
     <div class="wrap">
       <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / Pest Control</div>
       <div class="service-hero-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
       <h1>Pest Control</h1>
       <p class="lead">We are a professional pest management company dedicated to providing safe, effective and environmentally responsible pest control solutions. With a team of trained specialists and modern treatment methods, we help residential, commercial and industrial clients maintain clean, healthy and pest-free environments.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Pest%20Control." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp ↗</a>
+        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Pest%20Control." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp &#8599;</a>
         <a href="#services" class="btn-ghost route-link" data-route="home">All services</a>
       </div>
     </div>
@@ -951,32 +985,62 @@ html.no-js [hidden]{display:block;}
         <span class="section-tag" style="color:var(--red-dark)">Explore more</span>
         <h2>Other services from ABMS</h2>
       </div>
-      <div class="related-grid reveal">
-      <a class="related-card route-link" data-route="civil-works" href="#civil-works">
-        <div class="rc-icon" style="background:#4B4844"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h4>Civil Works</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="mep" href="#mep">
-        <div class="rc-icon" style="background:#8A2A21"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg></div>
-        <h4>MEP</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="cleaning-services" href="#cleaning-services">
-        <div class="rc-icon" style="background:#E23A2E"><svg viewBox="0 0 24 24"><path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></div>
-        <h4>Cleaning Services</h4>
-        <span class="mono">View details</span>
-      </a>
-      <a class="related-card route-link" data-route="landscaping" href="#landscaping">
-        <div class="rc-icon" style="background:#3E7A5A"><svg viewBox="0 0 24 24"><path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/></svg></div>
-        <h4>Landscaping & Gardens</h4>
-        <span class="mono">View details</span>
-      </a>
+      <div class="chip-row reveal">
+        <a class="chip route-link" data-route="it-staffing" href="#it-staffing"><span class="chip-dot" style="background:#4A3B52"></span>IT Staffing</a>
+        <a class="chip route-link" data-route="civil-works" href="#civil-works"><span class="chip-dot" style="background:#4B4844"></span>Civil Works</a>
+        <a class="chip route-link" data-route="mep" href="#mep"><span class="chip-dot" style="background:#8A2A21"></span>MEP</a>
+        <a class="chip route-link" data-route="cleaning-services" href="#cleaning-services"><span class="chip-dot" style="background:#7A2430"></span>Cleaning Services</a>
+        <a class="chip route-link" data-route="landscaping" href="#landscaping"><span class="chip-dot" style="background:#3E7A5A"></span>Landscaping &amp; Gardens</a>
+        <a class="chip route-link" data-route="car-cleaning" href="#car-cleaning"><span class="chip-dot" style="background:#3C7A8C"></span>Car Cleaning</a>
+      </div>
+    </div>
+  </section>
+</div><div class="route-section" data-route="car-cleaning" hidden>
+  <section class="service-hero" style="background:linear-gradient(160deg,#3C7A8C,#1F4552)">
+    <div class="num-tag">07</div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home" class="route-link" data-route="home">Home</a> / <a href="#services" class="route-link" data-route="home">Services</a> / Car Cleaning</div>
+      <div class="service-hero-icon"><svg viewBox="0 0 24 24"><path d="M3 13l2-5a2 2 0 012-1h10a2 2 0 012 1l2 5"/><path d="M3 13h18v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4z"/><circle cx="7.5" cy="18" r="1.3"/><circle cx="16.5" cy="18" r="1.3"/></svg></div>
+      <h1>Car Cleaning</h1>
+      <p class="lead">Professional car washing and detailing for residential compounds, corporate offices and company fleets across Abu Dhabi &mdash; keeping vehicles clean without the need for an in-house team.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/971542435240?text=Hello%20ABMS%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Car%20Cleaning." target="_blank" rel="noopener" class="btn-whatsapp">Get a quote on WhatsApp &#8599;</a>
+        <a href="#services" class="btn-ghost route-link" data-route="home">All services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="wrap">
+      <span class="section-tag mono" style="color:#3C7A8C">Full scope</span>
+      <div class="detail-block reveal">
+        <h2>Vehicle Cleaning Services</h2>
+        <div class="detail-cols"><ul><li>Exterior hand wash &amp; foam wash</li><li>Interior vacuuming &amp; detailing</li><li>Tyre &amp; rim cleaning</li><li>Waterless / eco-friendly wash options</li></ul></div>
+      </div>
+      <div class="detail-block reveal">
+        <h2>Fleet &amp; Corporate Programs</h2>
+        <div class="detail-cols"><ul><li>Scheduled on-site washing for offices &amp; residences</li><li>Fleet cleaning contracts for businesses</li><li>Dashboard &amp; interior sanitization</li><li>Flexible daily, weekly or monthly plans</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="wrap">
+      <div class="related-head reveal">
+        <span class="section-tag" style="color:var(--red-dark)">Explore more</span>
+        <h2>Other services from ABMS</h2>
+      </div>
+      <div class="chip-row reveal">
+        <a class="chip route-link" data-route="it-staffing" href="#it-staffing"><span class="chip-dot" style="background:#4A3B52"></span>IT Staffing</a>
+        <a class="chip route-link" data-route="civil-works" href="#civil-works"><span class="chip-dot" style="background:#4B4844"></span>Civil Works</a>
+        <a class="chip route-link" data-route="mep" href="#mep"><span class="chip-dot" style="background:#8A2A21"></span>MEP</a>
+        <a class="chip route-link" data-route="cleaning-services" href="#cleaning-services"><span class="chip-dot" style="background:#7A2430"></span>Cleaning Services</a>
+        <a class="chip route-link" data-route="landscaping" href="#landscaping"><span class="chip-dot" style="background:#3E7A5A"></span>Landscaping &amp; Gardens</a>
+        <a class="chip route-link" data-route="pest-control" href="#pest-control"><span class="chip-dot" style="background:#C97656"></span>Pest Control</a>
       </div>
     </div>
   </section>
 </div>
-
   <section class="contact" id="contact">
     <div class="mark-bl surveymark"></div>
     <div class="mark-br surveymark"></div>
@@ -1000,7 +1064,7 @@ html.no-js [hidden]{display:block;}
         </div>
       </div>
       <footer>
-          <div class="brand">ABMS Facilities Management Services  L.L.C S.P.C</div>
+          <div class="brand">ABMS Facilities Management Services L.L.C S.P.C</div>
           <div class="fine">© 2026 ABMS Facilities Management Services L.L.C S.P.C — Abu Dhabi, UAE</div>
       </footer>
     </div>
@@ -1020,11 +1084,13 @@ html.no-js [hidden]{display:block;}
     <div class="wa-panel-body">
       <div class="wa-bubble">Hi there 👋 How can we help? Pick a topic or type your own message below — it opens straight in WhatsApp.</div>
       <div class="wa-quick">
+<button data-msg="Hello ABMS, I would like to enquire about IT Staffing.">IT Staffing</button>
 <button data-msg="Hello ABMS, I would like to enquire about Civil Works.">Civil Works</button>
 <button data-msg="Hello ABMS, I would like to enquire about MEP.">MEP</button>
 <button data-msg="Hello ABMS, I would like to enquire about Cleaning Services.">Cleaning Services</button>
 <button data-msg="Hello ABMS, I would like to enquire about Landscaping & Gardens.">Landscaping & Gardens</button>
 <button data-msg="Hello ABMS, I would like to enquire about Pest Control.">Pest Control</button>
+<button data-msg="Hello ABMS, I would like to enquire about Car Cleaning.">Car Cleaning</button>
       </div>
     </div>
     <div class="wa-panel-form">
@@ -1037,7 +1103,7 @@ html.no-js [hidden]{display:block;}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
-  var ROUTES = ['home','civil-works','mep','cleaning-services','landscaping','pest-control'];
+  var ROUTES = ['home','it-staffing','civil-works','mep','cleaning-services','landscaping','pest-control','car-cleaning'];
 
   function showRoute(route, hash) {
     if (ROUTES.indexOf(route) === -1) route = 'home';
