@@ -261,7 +261,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .field label{display:block;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
 .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--light);padding:13px 16px;font-family:inherit;font-size:16px;font-weight:300;color:var(--ink);border-radius:4px;outline:none;transition:border-color .2s,background .2s}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--primary);background:var(--white)}
-.field textarea{min-height:120px;resize:vertical}
+.field textarea{min-height:110px;resize:vertical}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .contact-info{display:flex;flex-direction:column;position:relative;border-radius:6px;padding:30px 32px;color:rgba(255,255,255,.85)}
 .contact-info > *{position:relative;z-index:2}
@@ -658,7 +658,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
             <div class="field"><label for="fPhone">Phone</label><input id="fPhone" type="tel" placeholder="+971"></div>
           </div>
           <div class="field"><label for="fService">Service</label><select id="fService"></select></div>
-          <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" placeholder="Which service do you need? Share your property type, location and any details — e.g. IT staff required, interior fit-out, A/C maintenance, cleaning schedule or car wash plan."></textarea></div>
+          <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" placeholder="Please describe your requirement, preferred date and location — our team will get back to you shortly."></textarea></div>
           <button class="btn btn-primary" type="submit" style="width:100%">Send via WhatsApp</button>
         </form>
         <div class="contact-info cover reveal" style="--c1:#7A2430;--c2:#2A0F14">
@@ -845,9 +845,6 @@ section,[id]{scroll-margin-top:var(--header-h)}
   function row(list,cls){ return '<div class="marquee'+cls+'"><div class="m-track">'+list.map(function(c){return chip(c);}).join('')+list.map(function(c){return chip(c,1);}).join('')+'</div></div>'; }
   var half = Math.ceil(CLIENTS.length/2);
   document.getElementById('clientGrid').innerHTML = row(CLIENTS.slice(0,half),'') + row(CLIENTS.slice(half),' rev');
-  var HINTS = {"IT Software & Staffing": "Tell us the software you need or the IT roles you want to hire \u2014 number of staff, skills, contract length and start date.", "Interior Design": "Tell us about your space \u2014 office, retail or home, approximate size, location, style you like and your timeline.", "Civil Works": "Describe the work needed \u2014 repairs, painting, tiling, waterproofing or modifications \u2014 with the building type and location.", "MEP": "Describe the issue or requirement \u2014 A/C, electrical, plumbing or preventive maintenance \u2014 with the property type and location.", "Cleaning Services": "Tell us what needs cleaning \u2014 office, mall, deep or post-construction \u2014 the area size, location and preferred frequency.", "Maid Services": "Tell us when you need a maid — date, time and number of hours — plus your location and the tasks (cleaning, ironing, cooking help, etc.).", "Landscaping & Gardens": "Tell us about your outdoor area \u2014 new garden design or maintenance, approximate size, irrigation needs and location.", "Pest Control": "Tell us the pest problem \u2014 cockroaches, rodents, termites, bed bugs etc. \u2014 the property type, size and location.", "Car Wash Services": "Tell us how many vehicles, the location (home, office or fleet yard) and whether you need a one-time or regular wash plan."};
-  var fMsg = document.getElementById('fMsg'), defHint = fMsg.placeholder;
-  document.getElementById('fService').addEventListener('change', function(){ fMsg.placeholder = HINTS[this.value] || defHint; });
   document.getElementById('fService').innerHTML = '<option>General enquiry</option>'+SERVICES.map(function(s){return '<option>'+esc(s.name)+'</option>';}).join('');
   document.getElementById('waQuick').innerHTML = SERVICES.map(function(s){return '<button type="button" data-msg="Hello ABMS, I would like to enquire about '+esc(s.name)+'.">'+esc(s.name)+'</button>';}).join('');
   document.getElementById('yr').textContent = new Date().getFullYear();
