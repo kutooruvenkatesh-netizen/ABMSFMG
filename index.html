@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ABMS — IT Staffing &amp; Software, Facilities Management | Abu Dhabi</title>
-<meta name="description" content="IT software &amp; staffing, interior design, civil works, MEP, cleaning, landscaping, pest control and car wash services for commercial, residential and industrial clients in Abu Dhabi, UAE.">
+<meta name="description" content="IT software &amp; staffing, interior design, civil works, MEP, cleaning, on-demand maid services, landscaping, pest control and car wash services for commercial, residential and industrial clients in Abu Dhabi, UAE.">
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preload" as="image" href="https://images.unsplash.com/photo-1603565095944-2a6f33bb517c?auto=format&fit=crop&w=1920&q=75">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -218,7 +218,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .svc-card .go{display:inline-block;margin-top:10px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
 .svc-card:hover .go{letter-spacing:.14em}
 .svc-card p{font-size:13.5px;color:var(--muted);line-height:1.6}
-.svc-cta{grid-column:1 / -1;border-radius:6px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#fff}
+.svc-cta{grid-column:span var(--span4,4);border-radius:6px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#fff}
 .svc-cta small{display:block}
 .svc-cta > *{position:relative;z-index:2}
 .svc-cta small{color:var(--gold);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:10px}
@@ -261,7 +261,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
 .field label{display:block;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
 .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--light);padding:13px 16px;font-family:inherit;font-size:16px;font-weight:300;color:var(--ink);border-radius:4px;outline:none;transition:border-color .2s,background .2s}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--primary);background:var(--white)}
-.field textarea{min-height:110px;resize:vertical}
+.field textarea{min-height:120px;resize:vertical}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .contact-info{display:flex;flex-direction:column;position:relative;border-radius:6px;padding:30px 32px;color:rgba(255,255,255,.85)}
 .contact-info > *{position:relative;z-index:2}
@@ -360,6 +360,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
 }
 @media (max-width:991px){
   .tiles,.svc-grid,.other{grid-template-columns:1fr 1fr}
+  .svc-cta{grid-column:span var(--span2,2)}
   .tiles .tile:last-child{grid-column:1 / -1}
   .units{grid-template-columns:1fr 1fr}
   .c-item.active{grid-template-columns:1fr}
@@ -386,6 +387,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
   .svc-card p{display:none}
   .svc-cta{padding:22px 16px}
   .svc-cta h3{font-size:18px}
+  .svc-cta .btn{width:100%;padding:12px 10px;font-size:11px;letter-spacing:.04em;white-space:normal;text-align:center}
   .tiles{gap:12px}
   .tiles .tile:last-child,.f-grid > div:first-child{grid-column:auto}
   .tile{height:150px}
@@ -473,14 +475,14 @@ section,[id]{scroll-margin-top:var(--header-h)}
       <div class="inner">
         <span class="kicker">Abu Dhabi &middot; Est. 2024</span>
         <h1 class="h-wide"><span class="nowrap">IT staffing &amp; software providers,</span><br class="d-br"> facilities management &mdash;<br class="d-br"> <span class="serif">engineered</span> end to end</h1>
-        <p>Alongside interior design, civil works, MEP, cleaning, landscaping, pest control and car wash services — one trusted partner for commercial, residential and industrial clients across the UAE.</p>
+        <p>Alongside interior design, civil works, MEP, cleaning, on-call maid services, landscaping, pest control and car wash services — one trusted partner for commercial, residential and industrial clients across the UAE.</p>
         <div class="actions"><a href="#contact" class="btn btn-primary">Request a site visit</a><a href="#services" class="btn btn-white">Our services</a></div>
       </div>
     </div>
     <div class="slide cover" style="--c1:#4B4844;--c2:#151210">
       <div class="bg" role="img" aria-label="Technicians measuring a block wall on site" style="--img:url('https://images.unsplash.com/photo-1694521787193-9293daeddbaa?auto=format&fit=crop&w=1920&q=75');--tint:rgba(30,26,24,.35)"></div>
       <div class="inner">
-        <span class="kicker">Eight services &middot; One contract</span>
+        <span class="kicker">Multiple services &middot; One contract</span>
         <h1>One call keeps your <span class="serif">building</span> running</h1>
         <p>Every service line is delivered and supervised in-house, so you deal with a single point of contact instead of a chain of subcontractors.</p>
         <div class="actions"><a href="#services" class="btn btn-primary">Explore services</a><a href="tel:+971542435240" class="btn btn-white">Call us now</a></div>
@@ -524,7 +526,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Why ABMS</span>
-        <h2>Fast, reliable service built around <span class="serif">your</span> building</h2>
+        <h2>Fast &amp; <span class="serif">reliable</span> services for every property</h2>
         <p>We meet the changing demands of our clients with efficient, high-quality work on every job.</p>
       </div>
       <div class="units">
@@ -570,7 +572,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
             <div class="overlap-left">
               <span class="q-tag">Our story</span>
               <h3>Established in Abu Dhabi, 2024</h3>
-              <p class="lead">ABMS Facilities Management Services L.L.C S.P.C provides professional facilities management across a wide range of sectors — IT software &amp; staffing, interior design, civil works, MEP, commercial and deep cleaning, gardening, pest control and car wash services.</p>
+              <p class="lead">ABMS Facilities Management Services L.L.C S.P.C provides professional facilities management across a wide range of sectors — IT software &amp; staffing, interior design, civil works, MEP, commercial and deep cleaning, on-call maid services, gardening, pest control and car wash services.</p>
               <p class="sign">&mdash; <em>ABMS Facilities Management</em>, Abu Dhabi</p>
             </div>
           </div>
@@ -608,7 +610,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
       <div class="section-head reveal">
         <span class="eyebrow">What we do</span>
         <h2>Our <span class="serif">Services</span></h2>
-        <p>Eight service lines, one point of contact. Choose a service to see its full scope.</p>
+        <p>A complete range of services, one point of contact. Choose a service to see its full scope.</p>
       </div>
       <div class="svc-grid" id="svcGrid"></div>
     </div>
@@ -656,7 +658,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
             <div class="field"><label for="fPhone">Phone</label><input id="fPhone" type="tel" placeholder="+971"></div>
           </div>
           <div class="field"><label for="fService">Service</label><select id="fService"></select></div>
-          <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" placeholder="Tell us about your building, location and what you need"></textarea></div>
+          <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" placeholder="Which service do you need? Share your property type, location and any details — e.g. IT staff required, interior fit-out, A/C maintenance, cleaning schedule or car wash plan."></textarea></div>
           <button class="btn btn-primary" type="submit" style="width:100%">Send via WhatsApp</button>
         </form>
         <div class="contact-info cover reveal" style="--c1:#7A2430;--c2:#2A0F14">
@@ -740,6 +742,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
     'civil-works':'<path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/>',
     'mep':'<circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/>',
     'cleaning-services':'<path d="M6 3l12 12M18 3L6 15"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/>',
+    'maid-services':'<circle cx="12" cy="6" r="3"/><path d="M6 21l2-9h8l2 9"/><path d="M9 12l-1-2h8l-1 2"/>',
     'landscaping':'<path d="M12 2v9M12 11c-3 0-5-2-5-5M12 11c3 0 5-2 5-5M6 22h12M12 22v-7"/>',
     'pest-control':'<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',
     'car-cleaning':'<path d="M3 13l2-5a2 2 0 012-1h10a2 2 0 012 1l2 5"/><path d="M3 13h18v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4z"/><circle cx="7.5" cy="18" r="1.3"/><circle cx="16.5" cy="18" r="1.3"/>'
@@ -783,6 +786,14 @@ section,[id]{scroll-margin-top:var(--header-h)}
       ['Office Cleaning',['Daily & periodic office cleaning','Workstation & desk sanitisation','Carpet & upholstery cleaning','Floor polishing & maintenance','Washroom cleaning & hygiene control','Trash removal & recycling']],
       ['Shopping Mall Cleaning',['Corridors & entrances','Escalator & elevator cleaning','Glass & façade cleaning','Food court cleaning & waste management','Parking area cleaning','High-traffic area sanitisation']],
       ['Specialized Cleaning',['Deep cleaning & disinfection','Glass & window cleaning','Floor scrubbing, polishing & buffing','Post-construction cleaning','Move-in / move-out cleaning']]]},
+    {id:'maid-services',img:'1758273705627-937374bfa978',name:'Maid Services',tag:'On Demand',c1:'#8C4A6B',c2:'#331626',
+     short:'Trained, vetted maids on call — hourly, daily or monthly, whenever you need them.',
+     lead:'Reliable, trained and background-checked maids available on call and on demand — book by the hour, by the day or on a monthly plan for homes, villas, apartments and offices across Abu Dhabi.',
+     groups:[
+      ['On-Call & On-Demand',['Same-day and next-day maid booking','Hourly visits — minimum 2 hours','Weekend and evening availability','Last-minute and one-time requests']],
+      ['Home Cleaning & Upkeep',['General house cleaning & tidying','Kitchen & bathroom cleaning','Dusting, mopping & vacuuming','Bed making & linen change']],
+      ['Household Help',['Laundry, ironing & folding','Dish washing & kitchen help','Wardrobe & cupboard organising','Party, event & guest preparation']],
+      ['Flexible Plans',['Hourly, daily & weekly visits','Monthly maid contracts','Full-time & part-time maids','Office & staff-accommodation housekeeping']]]},
     {id:'landscaping',img:'1621272156568-7306716648df',name:'Landscaping & Gardens',tag:'Outdoor',c1:'#3E7A5A',c2:'#132A1F',
      short:'Garden design, installation and maintenance built for the UAE climate.',
      lead:'Landscape design, installation and garden maintenance planned around the UAE\'s heat, soil and water conditions.',
@@ -823,7 +834,7 @@ section,[id]{scroll-margin-top:var(--header-h)}
 
   /* ---------- render shared lists ---------- */
   document.getElementById('svcGrid').innerHTML = SERVICES.map(card).join('') +
-    '<div class="svc-cta cover reveal" style="--c1:#7A2430;--c2:#2A0F14"><div><small>Not sure?</small><h3>Need more than one service?</h3><p>Bundle trades under one FM contract and one account manager.</p></div><a class="btn btn-wa" target="_blank" rel="noopener" href="'+waLink('Hello ABMS, I need a combined facilities management proposal.')+'">Ask on WhatsApp</a></div>';
+    '<div class="svc-cta cover reveal" style="--c1:#7A2430;--c2:#2A0F14;--span4:'+((4-SERVICES.length%4)||4)+';--span2:'+((2-SERVICES.length%2)||2)+'"><div><small>Not sure?</small><h3>Need more than one service?</h3><p>Bundle trades under one FM contract and one account manager.</p></div><a class="btn btn-wa" target="_blank" rel="noopener" href="'+waLink('Hello ABMS, I need a combined facilities management proposal.')+'">Ask on WhatsApp</a></div>';
   document.getElementById('ddServices').innerHTML = SERVICES.map(function(s){
     return '<li><a href="#service/'+s.id+'"><span class="dot" style="background:'+s.c1+'"></span>'+esc(s.name)+'</a></li>';}).join('');
   document.getElementById('mmServices').innerHTML = SERVICES.map(function(s){
@@ -834,6 +845,9 @@ section,[id]{scroll-margin-top:var(--header-h)}
   function row(list,cls){ return '<div class="marquee'+cls+'"><div class="m-track">'+list.map(function(c){return chip(c);}).join('')+list.map(function(c){return chip(c,1);}).join('')+'</div></div>'; }
   var half = Math.ceil(CLIENTS.length/2);
   document.getElementById('clientGrid').innerHTML = row(CLIENTS.slice(0,half),'') + row(CLIENTS.slice(half),' rev');
+  var HINTS = {"IT Software & Staffing": "Tell us the software you need or the IT roles you want to hire \u2014 number of staff, skills, contract length and start date.", "Interior Design": "Tell us about your space \u2014 office, retail or home, approximate size, location, style you like and your timeline.", "Civil Works": "Describe the work needed \u2014 repairs, painting, tiling, waterproofing or modifications \u2014 with the building type and location.", "MEP": "Describe the issue or requirement \u2014 A/C, electrical, plumbing or preventive maintenance \u2014 with the property type and location.", "Cleaning Services": "Tell us what needs cleaning \u2014 office, mall, deep or post-construction \u2014 the area size, location and preferred frequency.", "Maid Services": "Tell us when you need a maid — date, time and number of hours — plus your location and the tasks (cleaning, ironing, cooking help, etc.).", "Landscaping & Gardens": "Tell us about your outdoor area \u2014 new garden design or maintenance, approximate size, irrigation needs and location.", "Pest Control": "Tell us the pest problem \u2014 cockroaches, rodents, termites, bed bugs etc. \u2014 the property type, size and location.", "Car Wash Services": "Tell us how many vehicles, the location (home, office or fleet yard) and whether you need a one-time or regular wash plan."};
+  var fMsg = document.getElementById('fMsg'), defHint = fMsg.placeholder;
+  document.getElementById('fService').addEventListener('change', function(){ fMsg.placeholder = HINTS[this.value] || defHint; });
   document.getElementById('fService').innerHTML = '<option>General enquiry</option>'+SERVICES.map(function(s){return '<option>'+esc(s.name)+'</option>';}).join('');
   document.getElementById('waQuick').innerHTML = SERVICES.map(function(s){return '<button type="button" data-msg="Hello ABMS, I would like to enquire about '+esc(s.name)+'.">'+esc(s.name)+'</button>';}).join('');
   document.getElementById('yr').textContent = new Date().getFullYear();
